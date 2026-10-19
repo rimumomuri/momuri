@@ -16,7 +16,7 @@ struct RoutineEntity: AppEntity {
 
     init(_ routine: Routine) {
         id = routine.id.uuidString
-        name = routine.name
+        name = routine.displayName
         symbol = routine.category.symbol
     }
 }
@@ -36,7 +36,10 @@ struct RoutineQuery: EntityStringQuery {
     @MainActor
     func entities(matching string: String) async throws -> [RoutineEntity] {
         let key = string.replacingOccurrences(of: " ", with: "")
-        return all().filter { $0.name.replacingOccurrences(of: " ", with: "").contains(key) }.map(RoutineEntity.init)
+        // 추천 이름은 한국어로 저장되므로 화면 이름(번역)으로도 찾는다
+        return all().filter { r in
+            [r.name, r.displayName].contains { $0.replacingOccurrences(of: " ", with: "").contains(key) }
+        }.map(RoutineEntity.init)
     }
 
     @MainActor
@@ -92,7 +95,7 @@ struct TodaySummaryIntent: AppIntent {
         let all = (try? SharedStore.container.mainContext.fetch(FetchDescriptor<Routine>())) ?? []
         let due = all.filter { $0.appears(on: .now) && !$0.isDone(on: .now) }
         guard !due.isEmpty else { return .result(dialog: "오늘 할 일을 다 했어요.") }
-        let list = due.prefix(5).map { "\($0.name) \($0.listStatus(on: .now))" }.joined(separator: ", ")
+        let list = due.prefix(5).map { "\($0.displayName) \($0.listStatus(on: .now))" }.joined(separator: ", ")
         return .result(dialog: "남은 일 \(due.count)개: \(list)")
     }
 }

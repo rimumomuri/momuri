@@ -126,7 +126,7 @@ final class ShareSync {
 
     @discardableResult
     private func push(_ routine: Routine) async throws -> ShareView {
-        guard let id = routine.shareId else { throw ShareClient.ServerError(message: "공유되지 않은 루틴이에요") }
+        guard let id = routine.shareId else { throw ShareClient.ServerError(message: String(localized: "공유되지 않은 루틴이에요")) }
         let since = Calendar.current.date(byAdding: .day, value: -120, to: .now) ?? .now
         let recent = routine.activeLogs.filter { $0.date >= since }
         // 공부처럼 목표량이 있는 루틴은 "완료한 날"만 잔디로, 양은 progress로
@@ -155,21 +155,21 @@ final class ShareSync {
         for member in view.members where member.id != me {
             let old = before.first { $0.id == member.id }
             if member.studyingSince != nil && old?.studyingSince == nil {
-                messages.append(("\(view.id)-study-\(member.id)", "\(member.name)님이 \(name) 공부를 시작했어요"))
+                messages.append(("\(view.id)-study-\(member.id)", String(localized: "\(member.name)님이 \(name) 공부를 시작했어요")))
             }
             if member.days.contains(today) && !(old?.days.contains(today) ?? false) {
-                messages.append(("\(view.id)-done-\(member.id)-\(today)", "\(member.name)님이 오늘 \(name)을(를) 했어요"))
+                messages.append(("\(view.id)-done-\(member.id)-\(today)", String(localized: "\(member.name)님이 오늘 \(name)을(를) 했어요")))
             }
         }
         var seen = Set(UserDefaults.standard.array(forKey: "seenCheers") as? [Int] ?? [])
         for cheer in view.cheers ?? [] where !seen.contains(cheer.id) {
             seen.insert(cheer.id)
-            messages.append(("cheer-\(cheer.id)", "\(cheer.fromName)님이 \(name) 응원을 보냈어요"))
+            messages.append(("cheer-\(cheer.id)", String(localized: "\(cheer.fromName)님이 \(name) 응원을 보냈어요")))
         }
         UserDefaults.standard.set(Array(seen.suffix(200)), forKey: "seenCheers")
         for (id, body) in messages {
             let content = UNMutableNotificationContent()
-            content.title = "같이 하기"
+            content.title = String(localized: "같이 하기")
             content.body = body
             content.sound = .default
             UNUserNotificationCenter.current().add(UNNotificationRequest(identifier: id, content: content, trigger: nil))

@@ -105,9 +105,9 @@ enum AlarmScheduler {
         let done = AlarmButton(text: "완료", textColor: .black, systemImageName: "checkmark")
         let alert: AlarmPresentation.Alert
         if #available(iOS 26.1, *) {
-            alert = AlarmPresentation.Alert(title: "\(routine.name)", secondaryButton: done, secondaryButtonBehavior: .custom)
+            alert = AlarmPresentation.Alert(title: "\(routine.displayName)", secondaryButton: done, secondaryButtonBehavior: .custom)
         } else {
-            alert = AlarmPresentation.Alert(title: "\(routine.name)",
+            alert = AlarmPresentation.Alert(title: "\(routine.displayName)",
                                             stopButton: AlarmButton(text: "끄기", textColor: .white, systemImageName: "xmark"),
                                             secondaryButton: done, secondaryButtonBehavior: .custom)
         }

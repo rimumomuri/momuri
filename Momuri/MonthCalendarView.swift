@@ -6,7 +6,8 @@ struct MonthCalendarView: View {
     let routines: [Routine]
 
     private let cal = Calendar.current
-    private let weekdays = ["일", "월", "화", "수", "목", "금", "토"]
+    private let weekdays = [String(localized: "일"), String(localized: "월"), String(localized: "화"), String(localized: "수"),
+                            String(localized: "목"), String(localized: "금"), String(localized: "토")]
 
     var body: some View {
         VStack(spacing: 8) {

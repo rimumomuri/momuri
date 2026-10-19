@@ -26,7 +26,7 @@ struct MomuriApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
-                .environment(\.locale, Locale(identifier: "ko_KR"))
+                .environment(\.locale, Locale.app)
                 #if DEBUG
                 .onAppear {
                     DebugSeed.runIfRequested()

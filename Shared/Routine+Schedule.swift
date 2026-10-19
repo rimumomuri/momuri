@@ -141,9 +141,9 @@ extension Routine {
             if category == .study { return studyProgress(on: .now) + (examLabel.map { " · " + $0 } ?? "") }
             if category == .screen {
                 switch ScreenTimeShared.status(on: .now) {
-                case .exceeded: return "목표 초과"
-                case .warning: return "80% 넘음"
-                case .normal: return "목표 " + ScreenTimeShared.label(minutes: goalMinutes)
+                case .exceeded: return String(localized: "목표 초과")
+                case .warning: return String(localized: "80% 넘음")
+                case .normal: return String(localized: "목표 \(ScreenTimeShared.label(minutes: goalMinutes))")
                 }
             }
             let today = Date.now
@@ -154,12 +154,12 @@ extension Routine {
             guard let n = daysUntilDue(), let end = dueEnd else { return "" }
             if n > 0 { return "D-\(n)" }
             let late = cal.dateComponents([.day], from: cal.startOfDay(for: .now), to: end).day ?? 0
-            if late >= 0 { return weekendOnly ? "이번 주말" : "D-day" }
-            return "+\(-late)일"
+            if late >= 0 { return weekendOnly ? String(localized: "이번 주말") : "D-day" }
+            return String(localized: "+\(-late)일")
         case .weekly:
             return "\(parts.count - remainingParts(inWeekOf: .now).count)/\(parts.count)"
         case .monthly:
-            return Routine.format(monthTotal(of: .now)) + "/" + Routine.format(targetValue) + targetUnit
+            return Routine.format(monthTotal(of: .now)) + "/" + Routine.format(targetValue) + targetUnit.localizedValue
         case .once:
             return eventLabel(relative: true)
         }
@@ -176,21 +176,21 @@ extension Routine {
 
     /// 목록 한 줄 요약 (주간형은 다음 차례 부위)
     func listStatus(on day: Date) -> String {
-        if isRestDay(day) && !isDone(on: day) { return "쉬는 날" }
+        if isRestDay(day) && !isDone(on: day) { return String(localized: "쉬는 날") }
         switch kind {
         case .weekly:
-            guard let next = remainingParts(inWeekOf: day).first else { return "이번 주 완료" }
-            return "\(next) 차례 · \(parts.count - remainingParts(inWeekOf: day).count)/\(parts.count)"
+            guard let next = remainingParts(inWeekOf: day).first else { return String(localized: "이번 주 완료") }
+            return String(localized: "\(next.localizedValue) 차례 · \(parts.count - remainingParts(inWeekOf: day).count)/\(parts.count)")
         case .monthly:
-            return "이번 달 " + statusLabel
+            return String(localized: "이번 달 \(statusLabel)")
         case .daily where !cal.isDateInToday(day):
             if category == .study { return studyProgress(on: day) }
             return times.count > 1 ? "\(logCount(on: day))/\(times.count)" : Routine.timeLabel(times[0])
         case .interval where !cal.isDateInToday(day):
             // 다른 날을 볼 때는 오늘 기준 D-n 대신 그날의 의미로
-            return isDone(on: day) ? "완료" : isWithinDueWindow(day) ? (weekendOnly ? "주말 예정" : "예정일") : statusLabel
+            return isDone(on: day) ? String(localized: "완료") : isWithinDueWindow(day) ? (weekendOnly ? String(localized: "주말 예정") : String(localized: "예정일")) : statusLabel
         case .daily where category == .study:
-            return Routine.format(dayTotal(on: day)) + "/" + Routine.format(studyGoal) + studyUnit
+            return Routine.format(dayTotal(on: day)) + "/" + Routine.format(studyGoal) + studyUnit.localizedValue
         default:
             return statusLabel
         }
@@ -200,12 +200,12 @@ extension Routine {
     var shortStatus: String {
         switch kind {
         case .daily:
-            if category == .diet { return dietPhase().eating ? "식사" : "금식" }
+            if category == .diet { return dietPhase().eating ? String(localized: "식사") : String(localized: "금식") }
             if category == .study { return Routine.format(dayTotal(on: .now)) + "/" + Routine.format(studyGoal) }
-            if category == .screen { return ScreenTimeShared.status(on: .now) == .exceeded ? "초과" : ScreenTimeShared.label(minutes: goalMinutes) }
+            if category == .screen { return ScreenTimeShared.status(on: .now) == .exceeded ? String(localized: "초과") : ScreenTimeShared.label(minutes: goalMinutes) }
             return times.count > 1 ? "\(min(logCount(on: .now), times.count))/\(times.count)" : statusLabel
         case .monthly:
-            return Routine.format(monthTotal(of: .now)) + targetUnit
+            return Routine.format(monthTotal(of: .now)) + targetUnit.localizedValue
         default:
             return statusLabel
         }
@@ -214,13 +214,13 @@ extension Routine {
     var scheduleLabel: String {
         switch kind {
         case .daily:
-            category == .study ? "하루 \(Routine.format(studyGoal))\(studyUnit)" + (examLabel.map { " · 시험 " + $0 } ?? "")
+            category == .study ? String(localized: "하루 \(Routine.format(studyGoal))\(studyUnit.localizedValue)") + (examLabel.map { String(localized: " · 시험 \($0)") } ?? "")
                 : category == .diet ? windowLabel + " · " + statusLabel
-                : category == .screen ? "하루 " + ScreenTimeShared.label(minutes: goalMinutes) + (ScreenTimeShared.status(on: .now) == .normal ? "" : " · " + statusLabel)
-                : "매일 " + statusLabel
-        case .interval: "\(intervalValue)\(intervalUnit.label)마다\(weekendOnly ? " 주말" : "") · " + statusLabel
-        case .weekly: "이번 주 " + statusLabel
-        case .monthly: "이번 달 " + statusLabel
+                : category == .screen ? String(localized: "하루 \(ScreenTimeShared.label(minutes: goalMinutes))") + (ScreenTimeShared.status(on: .now) == .normal ? "" : " · " + statusLabel)
+                : String(localized: "매일 \(statusLabel)")
+        case .interval: String(localized: "\(intervalValue)\(intervalUnit.label)마다") + (weekendOnly ? String(localized: " 주말") : "") + " · " + statusLabel
+        case .weekly: String(localized: "이번 주 \(statusLabel)")
+        case .monthly: String(localized: "이번 달 \(statusLabel)")
         case .once: eventLabel(relative: false) + (location.isEmpty ? "" : " · " + location)
         }
     }
@@ -315,21 +315,21 @@ extension Routine {
 
 extension Routine {
     var eventTimeLabel: String {
-        allDay ? "하루 종일" : eventDate.formatted(.dateTime.hour(.twoDigits(amPM: .omitted)).minute(.twoDigits))
+        allDay ? String(localized: "하루 종일") : eventDate.formatted(.dateTime.hour(.twoDigits(amPM: .omitted)).minute(.twoDigits))
     }
 
     /// relative: 오늘·내일·D-n 으로, 아니면 날짜로
     func eventLabel(relative: Bool) -> String {
         let days = cal.dateComponents([.day], from: cal.startOfDay(for: .now), to: cal.startOfDay(for: eventDate)).day ?? 0
         let c = cal.dateComponents([.month, .day], from: eventDate)
-        let weekday = eventDate.formatted(.dateTime.weekday(.abbreviated).locale(Locale(identifier: "ko_KR")))
-        let date = "\(c.month ?? 0)월 \(c.day ?? 0)일 (\(weekday))"
+        let weekday = eventDate.formatted(.dateTime.weekday(.abbreviated).locale(.app))
+        let date = String(localized: "\(c.month ?? 0)월 \(c.day ?? 0)일 (\(weekday))")
         guard relative else { return date + " " + eventTimeLabel }
         switch days {
-        case 0: return allDay ? "오늘" : eventTimeLabel
-        case 1: return "내일 " + eventTimeLabel
+        case 0: return allDay ? String(localized: "오늘") : eventTimeLabel
+        case 1: return String(localized: "내일 \(eventTimeLabel)")
         case 2...: return "D-\(days)"
-        default: return "지남"
+        default: return String(localized: "지남")
         }
     }
 
@@ -343,7 +343,7 @@ extension Routine {
 
 extension Routine {
     func studyProgress(on day: Date) -> String {
-        Routine.format(dayTotal(on: day)) + "/" + Routine.format(studyGoal) + studyUnit
+        Routine.format(dayTotal(on: day)) + "/" + Routine.format(studyGoal) + studyUnit.localizedValue
     }
 
     /// 시험까지 남은 날 (지났으면 nil)

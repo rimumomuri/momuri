@@ -11,7 +11,8 @@ enum ShareClient {
     struct ServerError: LocalizedError {
         let message: String
         var status = 0
-        var errorDescription: String? { message }
+        /// 서버가 보내는 한국어 오류 문장도 화면 언어로 바꿔 보여 준다
+        var errorDescription: String? { message.localizedValue }
     }
 
     static var baseURL: URL {
@@ -92,7 +93,7 @@ enum ShareClient {
         req.timeoutInterval = 10
         req.setValue("application/json", forHTTPHeaderField: "content-type")
         if auth {
-            guard let token = me?.token else { throw ServerError(message: "먼저 이름을 정해 주세요") }
+            guard let token = me?.token else { throw ServerError(message: String(localized: "먼저 이름을 정해 주세요")) }
             req.setValue("Bearer \(token)", forHTTPHeaderField: "authorization")
         }
         if let body {
@@ -108,7 +109,7 @@ enum ShareClient {
             return try await request(method, path, body: body, auth: auth, retried: true)
         }
         guard (200..<300).contains(status) else {
-            let message = (try? JSONDecoder().decode(ErrorBody.self, from: data))?.error ?? "서버에 연결할 수 없어요"
+            let message = (try? JSONDecoder().decode(ErrorBody.self, from: data))?.error ?? String(localized: "서버에 연결할 수 없어요")
             throw ServerError(message: message, status: status)
         }
         if status == 204 || data.isEmpty, let empty = Empty() as? T { return empty }

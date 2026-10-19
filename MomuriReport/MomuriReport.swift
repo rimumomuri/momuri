@@ -38,11 +38,11 @@ struct TotalActivityView: View {
         let ratio = min(Double(used) / Double(max(goal, 1)), 1)
         VStack(alignment: .leading, spacing: 6) {
             HStack {
-                Text("오늘 " + ScreenTimeShared.label(minutes: used))
+                Text("오늘 \(ScreenTimeShared.label(minutes: used))")
                     .font(.subheadline.monospacedDigit())
                     .foregroundStyle(used >= goal ? Color.red : used * 10 >= goal * 8 ? Color.orange : Color.primary)
                 Spacer()
-                Text("목표 " + ScreenTimeShared.label(minutes: goal))
+                Text("목표 \(ScreenTimeShared.label(minutes: goal))")
                     .font(.footnote)
                     .foregroundStyle(.secondary)
             }

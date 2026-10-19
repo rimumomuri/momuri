@@ -11,14 +11,8 @@ struct WorkoutLogView: View {
     @State private var confirmingRemove = false
     @State private var removing = false
 
-    private static let presets: [String: [String]] = [
-        "가슴": ["벤치프레스", "인클라인 덤벨프레스", "체스트 플라이", "딥스", "푸시업"],
-        "등": ["랫풀다운", "바벨 로우", "시티드 로우", "데드리프트", "풀업"],
-        "하체": ["스쿼트", "레그프레스", "런지", "레그 컬", "레그 익스텐션"],
-        "어깨": ["오버헤드 프레스", "사이드 레터럴 레이즈", "리어 델트 플라이", "업라이트 로우"],
-        "팔": ["바벨 컬", "해머 컬", "트라이셉스 푸시다운", "오버헤드 익스텐션"],
-        "복근": ["크런치", "플랭크", "레그 레이즈", "행잉 레그 레이즈"],
-    ]
+    /// 부위·종목 이름은 저장 값(한국어). 화면에는 localizedValue 로 보여 준다.
+    private static let presets = StoredValue.exercises
 
     private var routine: Routine? { log.routine }
     private var exercises: [String] { log.exercises }
@@ -31,8 +25,8 @@ struct WorkoutLogView: View {
     }
 
     private var title: String {
-        let date = log.date.formatted(.dateTime.month().day().weekday(.abbreviated).locale(Locale(identifier: "ko_KR")))
-        return "\(log.part ?? "운동") · \(date)"
+        let date = log.date.formatted(.dateTime.month().day().weekday(.abbreviated).locale(.app))
+        return "\(log.part?.localizedValue ?? String(localized: "운동")) · \(date)"
     }
 
     var body: some View {
@@ -80,10 +74,10 @@ struct WorkoutLogView: View {
         let best = routine?.bestSet(of: exercise)
         return VStack(alignment: .leading, spacing: 10) {
             HStack(alignment: .firstTextBaseline) {
-                Text(exercise).font(.headline)
+                Text(exercise.localizedValue).font(.headline)
                 Spacer()
                 if let best, best.weight > 0 {
-                    Text("최고 " + best.summary).font(.caption).foregroundStyle(.secondary)
+                    Text("최고 \(best.summary)").font(.caption).foregroundStyle(.secondary)
                 }
             }
             if let last = previous.last {
@@ -112,7 +106,7 @@ struct WorkoutLogView: View {
                 LazyVGrid(columns: [GridItem(.adaptive(minimum: 104), spacing: 8)], spacing: 8) {
                     ForEach(suggestions, id: \.self) { name in
                         Button { addExercise(name) } label: {
-                            Text(name)
+                            Text(name.localizedValue)
                                 .font(.footnote)
                                 .lineLimit(1)
                                 .minimumScaleFactor(0.8)

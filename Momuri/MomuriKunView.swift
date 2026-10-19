@@ -188,13 +188,13 @@ struct MomuriKunView: View {
     private var accessibilityText: String {
         let percent = Int((min(max(rate, 0), 1) * 100).rounded())
         let text: String = switch mood {
-        case .idle: "평온해요"
-        case .happy: "기뻐요"
-        case .celebrate: "오늘 할 일을 다 끝냈어요"
-        case .sleepy: "쉬는 중이에요"
-        case .reminder: "곧 할 일이 있어요"
+        case .idle: String(localized: "평온해요")
+        case .happy: String(localized: "기뻐요")
+        case .celebrate: String(localized: "오늘 할 일을 다 끝냈어요")
+        case .sleepy: String(localized: "쉬는 중이에요")
+        case .reminder: String(localized: "곧 할 일이 있어요")
         }
-        return "모무리쿤, \(text). 오늘 \(percent)% 달성"
+        return String(localized: "모무리쿤, \(text). 오늘 \(percent)% 달성")
     }
 }
 

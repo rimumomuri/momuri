@@ -7,7 +7,7 @@ struct DietPhase: Equatable {
     let start: Date
     let end: Date
 
-    var title: String { eating ? "식사 시간" : "금식 중" }
+    var title: String { eating ? String(localized: "식사 시간") : String(localized: "금식 중") }
 }
 
 extension Routine {
@@ -32,7 +32,7 @@ extension Routine {
     var dietStatus: String {
         let phase = dietPhase()
         let until = Routine.timeLabel(phase.eating ? windowEnd : windowStart)
-        return "\(phase.title) · \(until)까지"
+        return String(localized: "\(phase.title) · \(until)까지")
     }
 }
 

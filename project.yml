@@ -1,6 +1,7 @@
 name: Momuri
 options:
   bundleIdPrefix: com.rymchoi
+  developmentLanguage: ko
   deploymentTarget:
     iOS: "26.0"
 settings:
@@ -9,6 +10,8 @@ settings:
     MARKETING_VERSION: "0.1.0"
     CURRENT_PROJECT_VERSION: "1"
     DEVELOPMENT_TEAM: ""
+    SWIFT_EMIT_LOC_STRINGS: YES
+    LOCALIZATION_PREFERS_STRING_CATALOGS: YES
 targets:
   Momuri:
     type: application
@@ -18,6 +21,8 @@ targets:
       path: Momuri/Info.plist
       properties:
         CFBundleDisplayName: momuri
+        # 설정 앱의 앱별 언어에 한국어·일본어를 보여 준다
+        CFBundleLocalizations: [ko, ja]
         NSSupportsLiveActivities: true
         UIBackgroundModes: [fetch]
         CFBundleURLTypes:
@@ -70,7 +75,7 @@ targets:
   MomuriMonitor:
     type: app-extension
     platform: iOS
-    sources: [MomuriMonitor, Shared/ScreenTimeShared.swift]
+    sources: [MomuriMonitor, Shared/ScreenTimeShared.swift, Shared/Localization.swift, Shared/Localizable.xcstrings]
     info:
       path: MomuriMonitor/Info.plist
       properties:
@@ -89,7 +94,7 @@ targets:
   MomuriReport:
     type: extensionkit-extension
     platform: iOS
-    sources: [MomuriReport, Shared/ScreenTimeShared.swift]
+    sources: [MomuriReport, Shared/ScreenTimeShared.swift, Shared/Localization.swift, Shared/Localizable.xcstrings]
     info:
       path: MomuriReport/Info.plist
       properties:
@@ -121,3 +126,6 @@ schemes:
         Momuri: all
     test:
       targets: [MomuriTests]
+      # 테스트는 한국어 문장을 확인하므로 시뮬레이터 언어와 상관없이 한국어로 돌린다
+      language: ko
+      region: KR

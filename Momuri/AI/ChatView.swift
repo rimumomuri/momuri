@@ -8,10 +8,10 @@ struct ChatView: View {
     @FocusState private var focused: Bool
 
     private let suggestions = [
-        "매일 아침 8시에 비타민 먹기",
-        "다음 주 금요일 저녁 7시 강남역에서 유진이랑 저녁",
-        "이번 달 러닝 얼마나 했어?",
-        "헬스 가슴 했어",
+        String(localized: "매일 아침 8시에 비타민 먹기"),
+        String(localized: "다음 주 금요일 저녁 7시 강남역에서 유진이랑 저녁"),
+        String(localized: "이번 달 러닝 얼마나 했어?"),
+        String(localized: "헬스 가슴 했어"),
     ]
 
     var body: some View {
@@ -106,7 +106,7 @@ struct ChatView: View {
         VStack(alignment: .leading, spacing: 10) {
             HStack(spacing: 8) {
                 Image(systemName: draft.category.symbol).foregroundStyle(.secondary)
-                Text(draft.name).font(.headline)
+                Text(draft.name.localizedValue).font(.headline)
             }
             Text(draft.summary.joined(separator: " · "))
                 .font(.subheadline)

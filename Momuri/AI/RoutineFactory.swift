@@ -25,27 +25,31 @@ enum RoutineFactory {
             case .appointment:
                 if let date {
                     let c = Calendar.current.dateComponents([.month, .day], from: date)
-                    lines.append("\(c.month ?? 0)월 \(c.day ?? 0)일" + (time.map { String(format: " %02d:%02d", $0.hour, $0.minute) } ?? " 하루 종일"))
+                    let m = c.month ?? 0, d = c.day ?? 0
+                    lines.append(time.map { String(localized: "\(m)월 \(d)일 \(String(format: "%02d:%02d", $0.hour, $0.minute))") }
+                        ?? String(localized: "\(m)월 \(d)일 하루 종일"))
                 }
                 if !location.isEmpty { lines.append(location) }
             case .care, .pet:
-                lines.append("\(intervalValue ?? 1)\((intervalUnit ?? .month).label)마다")
+                lines.append(String(localized: "\(intervalValue ?? 1)\((intervalUnit ?? .month).label)마다"))
             case .other:
-                lines.append(intervalValue.map { "\($0)\((intervalUnit ?? .month).label)마다" } ?? "매일")
+                lines.append(intervalValue.map { String(localized: "\($0)\((intervalUnit ?? .month).label)마다") } ?? String(localized: "매일"))
             case .gym:
-                lines.append("이번 주 " + (parts.isEmpty ? ["가슴", "등", "하체", "어깨"] : parts).joined(separator: " · "))
+                // 부위는 한국어로 저장되는 값이라 보여 줄 때만 번역
+                let shown = (parts.isEmpty ? StoredValue.defaultParts : parts).map(\.localizedValue).joined(separator: " · ")
+                lines.append(String(localized: "이번 주 \(shown)"))
             case .study:
-                lines.append("하루 \(Routine.format(goal ?? 30))문제")
+                lines.append(String(localized: "하루 \(Routine.format(goal ?? 30))문제"))
                 if let date {
                     let c = Calendar.current.dateComponents([.month, .day], from: date)
-                    lines.append("시험 \(c.month ?? 0)월 \(c.day ?? 0)일")
+                    lines.append(String(localized: "시험 \(c.month ?? 0)월 \(c.day ?? 0)일"))
                 }
             case .cardio:
-                lines.append("한 달 \(Routine.format(goal ?? 30))km")
+                lines.append(String(localized: "한 달 \(Routine.format(goal ?? 30))km"))
             default:
-                lines.append("매일")
+                lines.append(String(localized: "매일"))
             }
-            if category != .appointment, let time { lines.append(String(format: "알림 %02d:%02d", time.hour, time.minute)) }
+            if category != .appointment, let time { lines.append(String(localized: "알림 \(String(format: "%02d:%02d", time.hour, time.minute))")) }
             return lines
         }
     }
@@ -75,7 +79,7 @@ enum RoutineFactory {
         case .medicine:
             r.isCritical = true
         case .gym:
-            r.parts = d.parts.isEmpty ? ["가슴", "등", "하체", "어깨"] : d.parts
+            r.parts = d.parts.isEmpty ? StoredValue.defaultParts : d.parts
             if d.time == nil { r.reminderHour = 19 }
         case .cardio:
             r.targetUnit = "km"

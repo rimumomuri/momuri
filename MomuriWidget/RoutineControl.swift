@@ -7,7 +7,7 @@ struct RoutineControl: ControlWidget {
     var body: some ControlWidgetConfiguration {
         AppIntentControlConfiguration(kind: "MomuriRoutineControl", intent: SelectRoutineControlIntent.self) { config in
             ControlWidgetButton(action: config.logIntent) {
-                Label(config.routine?.name ?? "루틴 고르기", systemImage: config.routine?.symbol ?? "checkmark.circle")
+                Label(config.routine?.name ?? String(localized: "루틴 고르기"), systemImage: config.routine?.symbol ?? "checkmark.circle")
             }
         }
         .displayName("momuri 기록")

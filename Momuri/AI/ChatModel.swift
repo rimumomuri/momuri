@@ -30,10 +30,10 @@ final class ChatModel {
     var unavailableReason: String? {
         switch SystemLanguageModel.default.availability {
         case .available: nil
-        case .unavailable(.deviceNotEligible): "이 기기는 Apple Intelligence를 지원하지 않아요."
-        case .unavailable(.appleIntelligenceNotEnabled): "설정 > Apple Intelligence를 켜면 쓸 수 있어요."
-        case .unavailable(.modelNotReady): "AI 모델을 내려받는 중이에요. 잠시 뒤에 다시 해 주세요."
-        case .unavailable: "지금은 AI를 쓸 수 없어요."
+        case .unavailable(.deviceNotEligible): String(localized: "이 기기는 Apple Intelligence를 지원하지 않아요.")
+        case .unavailable(.appleIntelligenceNotEnabled): String(localized: "설정 > Apple Intelligence를 켜면 쓸 수 있어요.")
+        case .unavailable(.modelNotReady): String(localized: "AI 모델을 내려받는 중이에요. 잠시 뒤에 다시 해 주세요.")
+        case .unavailable: String(localized: "지금은 AI를 쓸 수 없어요.")
         }
     }
 
@@ -56,7 +56,7 @@ final class ChatModel {
             if case .exceededContextWindowSize = error {
                 // 대화가 길어지면 새로 시작한다
                 session = nil
-                items.append(.assistant(UUID(), "대화가 길어져서 새로 시작할게요. 다시 말해 주세요."))
+                items.append(.assistant(UUID(), String(localized: "대화가 길어져서 새로 시작할게요. 다시 말해 주세요.")))
             } else {
                 applyFallback(text)
             }
@@ -111,18 +111,22 @@ final class ChatModel {
 
     private func instructions() -> String {
         let f = DateFormatter()
-        f.locale = Locale(identifier: "ko_KR")
+        f.locale = Locale.app
         f.dateFormat = "yyyy-MM-dd (E)"
         let routines = ((try? SharedStore.container.mainContext.fetch(FetchDescriptor<Routine>())) ?? [])
             .filter { $0.kind != .once || $0.isUpcoming }
-            .map { "- \($0.name) [\($0.category.title)] \($0.statusLabel)" }
+            .map { "- \($0.displayName) [\($0.category.title)] \($0.statusLabel)" }
             .joined(separator: "\n")
+        // 답하는 언어는 앱 화면 언어를 따른다
+        let replyRule = Locale.app.language.languageCode?.identifier == "ja"
+            ? "답은 일본어 정중체(です・ます)로 한두 문장, 짧게."
+            : "답은 한국어 존댓말로 한두 문장, 짧게."
         return """
         너는 루틴 앱 momuri의 도우미야. 오늘은 \(f.string(from: .now))이야.
         - 새로 반복할 일을 만들려는 말이면 proposeRoutine, 날짜가 있는 약속이면 proposeAppointment를 불러. 날짜는 오늘 기준으로 계산해.
         - '했어', '먹었어', '뛰었어', '풀었어'처럼 한 일을 말하면 logRoutine을 불러.
         - 기록에 대한 질문이면 getStats로 확인한 뒤 그 숫자로만 답해. 숫자를 지어내지 마.
-        - 답은 한국어 존댓말로 한두 문장, 짧게.
+        - \(replyRule)
         현재 루틴:
         \(routines.isEmpty ? "(없음)" : routines)
         """

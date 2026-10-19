@@ -1,0 +1,3955 @@
+{
+  "sourceLanguage" : "ko",
+  "strings" : {
+    " · 시험 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " · 試験 %@"
+          }
+        }
+      }
+    },
+    " 주말" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " 週末"
+          }
+        }
+      }
+    },
+    "${routine} 기록하기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${routine}を記録"
+          }
+        }
+      }
+    },
+    "%@" : {
+      "shouldTranslate" : false
+    },
+    "%@ %@ 기록했어요. %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@の%2$@を記録しました。%3$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@ 기록했어요. %3$@"
+          }
+        }
+      }
+    },
+    "%@ %@ 기록했어요. 지금 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@に%2$@を記録しました。現在 %3$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ %2$@ 기록했어요. 지금 %3$@"
+          }
+        }
+      }
+    },
+    "%@ (7일 중 %lld번)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@（7日中%2$lld回）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ (7일 중 %2$lld번)"
+          }
+        }
+      }
+    },
+    "%@ · %@까지" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · %2$@まで"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · %2$@까지"
+          }
+        }
+      }
+    },
+    "%@ · 식사 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@ · 食事 %2$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ · 식사 %2$@"
+          }
+        }
+      }
+    },
+    "%@ 기록했어요. %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@を記録しました。%2$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ 기록했어요. %2$@"
+          }
+        }
+      }
+    },
+    "%@ 차례 · %lld/%lld" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "次は%1$@ · %2$lld/%3$lld"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@ 차례 · %2$lld/%3$lld"
+          }
+        }
+      }
+    },
+    "%@(나)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@（自分）"
+          }
+        }
+      }
+    },
+    "%@/%@%@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@/%2$@%3$@"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "%@: %@ %lld일 했어요, 합계 %@%@. 지금 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@：%2$@は%3$lld日やりました。合計%4$@%5$@。現在 %6$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@: %2$@ %3$lld일 했어요, 합계 %4$@%5$@. 지금 %6$@"
+          }
+        }
+      }
+    },
+    "%@: %@ %lld일 했어요. 지금 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@：%2$@は%3$lld日やりました。現在 %4$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@: %2$@ %3$lld일 했어요. 지금 %4$@"
+          }
+        }
+      }
+    },
+    "%@님이 %@ 공부를 시작했어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@さんが%2$@の勉強を始めました"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@님이 %2$@ 공부를 시작했어요"
+          }
+        }
+      }
+    },
+    "%@님이 %@ 응원을 보냈어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@さんが%2$@の応援を送りました"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@님이 %2$@ 응원을 보냈어요"
+          }
+        }
+      }
+    },
+    "%@님이 오늘 %@을(를) 했어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@さんが今日%2$@をやりました"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@님이 오늘 %2$@을(를) 했어요"
+          }
+        }
+      }
+    },
+    "%@에 더하기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@に追加"
+          }
+        }
+      }
+    },
+    "%@은 %@이에요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$@は%2$@です。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$@은 %2$@이에요."
+          }
+        }
+      }
+    },
+    "%@은 양을 같이 말해 주세요. 예: 5km, 20문제" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@は量も一緒に伝えてください。例：5km、20問"
+          }
+        }
+      }
+    },
+    "%@은 이미 기록돼 있어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@はもう記録されています。"
+          }
+        }
+      }
+    },
+    "%lld" : {
+      "shouldTranslate" : false
+    },
+    "%lld%%" : {
+      "shouldTranslate" : false
+    },
+    "%lld%@마다" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld%2$@ごと"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld%2$@마다"
+          }
+        }
+      }
+    },
+    "%lld/%lld" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld/%2$lld"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "%lld번째 시간이에요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld回目の時間です"
+          }
+        }
+      }
+    },
+    "%lld분" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld分"
+          }
+        }
+      }
+    },
+    "%lld분 후" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld分後"
+          }
+        }
+      }
+    },
+    "%lld세트 삭제" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lldセット目を削除"
+          }
+        }
+      }
+    },
+    "%lld시간" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld時間"
+          }
+        }
+      }
+    },
+    "%lld시간 %lld분" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld時間%2$lld分"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld시간 %2$lld분"
+          }
+        }
+      }
+    },
+    "%lld시간 후" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld時間後"
+          }
+        }
+      }
+    },
+    "%lld월" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld月"
+          }
+        }
+      }
+    },
+    "%lld월 %lld일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld月%2$lld日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld월 %2$lld일"
+          }
+        }
+      }
+    },
+    "%lld월 %lld일 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld月%2$lld日（%3$@）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld월 %2$lld일 %3$@"
+          }
+        }
+      }
+    },
+    "%lld월 %lld일 (%@)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld月%2$lld日（%3$@）"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld월 %2$lld일 (%3$@)"
+          }
+        }
+      }
+    },
+    "%lld월 %lld일 하루 종일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%1$lld月%2$lld日 終日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "%1$lld월 %2$lld일 하루 종일"
+          }
+        }
+      }
+    },
+    "%lld일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld日"
+          }
+        }
+      }
+    },
+    "%lld일 남았어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "あと%lld日です"
+          }
+        }
+      }
+    },
+    "%lld일 전부터" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld日前から"
+          }
+        }
+      }
+    },
+    "%lld일 지났어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld日過ぎました"
+          }
+        }
+      }
+    },
+    "%lld회" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld回"
+          }
+        }
+      }
+    },
+    "%lld회 삭제" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%lld回目を削除"
+          }
+        }
+      }
+    },
+    "+%@" : {
+      "shouldTranslate" : false
+    },
+    "+%lld일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "+%lld日"
+          }
+        }
+      }
+    },
+    "/ %@%@" : {
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "/ %1$@%2$@"
+          }
+        }
+      },
+      "shouldTranslate" : false
+    },
+    "0" : {
+      "shouldTranslate" : false
+    },
+    "10분 전" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10分前"
+          }
+        }
+      }
+    },
+    "1시간 전" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1時間前"
+          }
+        }
+      }
+    },
+    "80% 넘음" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "80%超え"
+          }
+        }
+      }
+    },
+    "ABC234" : {
+      "shouldTranslate" : false
+    },
+    "AI 모델을 내려받는 중이에요. 잠시 뒤에 다시 해 주세요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AIモデルをダウンロード中です。しばらくしてからもう一度お試しください。"
+          }
+        }
+      }
+    },
+    "AI 채팅" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "AIチャット"
+          }
+        }
+      }
+    },
+    "Dynamic Island에 표시" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Dynamic Islandに表示"
+          }
+        }
+      }
+    },
+    "Routine ID" : {
+      "shouldTranslate" : false
+    },
+    "kg" : {
+      "shouldTranslate" : false
+    },
+    "km" : {
+      "shouldTranslate" : false
+    },
+    "momuri" : {
+      "shouldTranslate" : false
+    },
+    "momuri AI" : {
+      "shouldTranslate" : false
+    },
+    "momuri 기록" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "momuri 記録"
+          }
+        }
+      }
+    },
+    "momuri 백업 파일이 아니에요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "momuriのバックアップファイルではありません。"
+          }
+        }
+      }
+    },
+    "momuri 오늘" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "momuri 今日"
+          }
+        }
+      }
+    },
+    "momuri에서 '%@' 같이 해요. 초대 코드: %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "momuriで「%1$@」を一緒にやりましょう。招待コード：%2$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "momuri에서 '%1$@' 같이 해요. 초대 코드: %2$@"
+          }
+        }
+      }
+    },
+    "z" : {
+      "shouldTranslate" : false
+    },
+    "×" : {
+      "shouldTranslate" : false
+    },
+    "–" : {
+      "shouldTranslate" : false
+    },
+    "각자 체크하고, 루틴 목록에서 서로의 잔디를 볼 수 있어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "それぞれチェックして、ルーティン一覧でお互いの草を見られます。"
+          }
+        }
+      }
+    },
+    "간단 모드" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "簡易モード"
+          }
+        }
+      }
+    },
+    "같이 공부" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一緒に勉強"
+          }
+        }
+      }
+    },
+    "같이 공부할 시간 정하기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一緒に勉強する時間を決める"
+          }
+        }
+      }
+    },
+    "같이 공부할 시간이에요 · %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一緒に勉強する時間です · %@"
+          }
+        }
+      }
+    },
+    "같이 하기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "一緒にやる"
+          }
+        }
+      }
+    },
+    "개월" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "か月"
+          }
+        }
+      }
+    },
+    "거리 (km)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距離（km）"
+          }
+        }
+      }
+    },
+    "거리 기록" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "距離を記録"
+          }
+        }
+      }
+    },
+    "건강 앱(애플워치·러닝 앱)의 러닝 운동이 앱을 열 때 자동으로 들어와요. 직접 적은 기록도 함께 쌓여요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ヘルスケア（Apple Watch・ランニングアプリ）のランニングが、アプリを開いたときに自動で入ります。手入力の記録も一緒に積み上がります。"
+          }
+        }
+      }
+    },
+    "건강 앱에서 자동 기록" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ヘルスケアから自動記録"
+          }
+        }
+      }
+    },
+    "고르기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選ぶ"
+          }
+        }
+      }
+    },
+    "고르면 이름과 주기가 채워져요. 병원 진료처럼 날짜가 정해진 건 약속으로 만들어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選ぶと名前と周期が入ります。病院の診察のように日付が決まっているものは予定として作ります。"
+          }
+        }
+      }
+    },
+    "고른 순서대로 다음 항목을 알려줘요. 이번 주 안에 끝내기 빠듯할 때만 알림이 와요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "選んだ順に次の項目をお知らせします。今週中に終えるのが厳しいときだけ通知が来ます。"
+          }
+        }
+      }
+    },
+    "곧" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "近日"
+          }
+        }
+      }
+    },
+    "곧 할 일이 있어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もうすぐやることがあります"
+          }
+        }
+      }
+    },
+    "곧 해야 해요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "もうすぐ期限です"
+          }
+        }
+      }
+    },
+    "공부 시작" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勉強開始"
+          }
+        }
+      }
+    },
+    "공부 중" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勉強中"
+          }
+        }
+      }
+    },
+    "공부 중 · " : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勉強中 · "
+          }
+        }
+      }
+    },
+    "공부한 시간을 재요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勉強した時間を計ります"
+          }
+        }
+      }
+    },
+    "공유 그만하기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "共有をやめる"
+          }
+        }
+      }
+    },
+    "공유되지 않은 루틴이에요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "共有されていないルーティンです"
+          }
+        }
+      }
+    },
+    "공유하기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "共有する"
+          }
+        }
+      }
+    },
+    "공유한 사람들에게 이 이름으로 보여요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "共有した人にはこの名前で表示されます"
+          }
+        }
+      }
+    },
+    "관리·미용" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ケア・美容"
+          }
+        }
+      }
+    },
+    "그동안은 아래 예시 같은 짧은 문장만 알아들어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "それまでは、下の例のような短い韓国語の文だけ理解できます。"
+          }
+        }
+      }
+    },
+    "그만하기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "やめる"
+          }
+        }
+      }
+    },
+    "금" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "金"
+          }
+        }
+      }
+    },
+    "금식" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "断食"
+          }
+        }
+      }
+    },
+    "금식 시작 · 다음 식사 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "断食開始 · 次の食事 %@"
+          }
+        }
+      }
+    },
+    "금식 중" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "断食中"
+          }
+        }
+      }
+    },
+    "금식·식사 남은 시간을 잠금화면과 Dynamic Island에 띄워요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "断食・食事の残り時間をロック画面とDynamic Islandに表示します"
+          }
+        }
+      }
+    },
+    "기기 안 AI로 처리돼서 내용이 밖으로 나가지 않아요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "端末内のAIで処理されるので、内容が外に出ることはありません。"
+          }
+        }
+      }
+    },
+    "기기 안에서만 처리돼요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "端末内だけで処理されます。"
+          }
+        }
+      }
+    },
+    "기록" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記録"
+          }
+        }
+      }
+    },
+    "기록할 루틴" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "記録するルーティン"
+          }
+        }
+      }
+    },
+    "기뻐요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "うれしい"
+          }
+        }
+      }
+    },
+    "기타" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "その他"
+          }
+        }
+      }
+    },
+    "기한 지남" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "期限切れ"
+          }
+        }
+      }
+    },
+    "기한이 다가오면 주황, 놓치면 빨강으로 표시해요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "期限が近づくとオレンジ、過ぎると赤で表示します"
+          }
+        }
+      }
+    },
+    "꼭 해야 하는 루틴" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "必ずやるルーティン"
+          }
+        }
+      }
+    },
+    "끄기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オフにする"
+          }
+        }
+      }
+    },
+    "끝" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了"
+          }
+        }
+      }
+    },
+    "끝나는 시간이 시작보다 늦어야 해요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終了時間は開始より後にしてください"
+          }
+        }
+      }
+    },
+    "끝내고 기록하기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終えて記録する"
+          }
+        }
+      }
+    },
+    "끝내기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終える"
+          }
+        }
+      }
+    },
+    "끝내면 공부한 시간이 자동으로 더해져요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終えると勉強した時間が自動で加算されます"
+          }
+        }
+      }
+    },
+    "끝냄" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了"
+          }
+        }
+      }
+    },
+    "날짜" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日付"
+          }
+        }
+      }
+    },
+    "날짜 선택" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日付を選ぶ"
+          }
+        }
+      }
+    },
+    "날짜·시간·장소가 있는 한 번의 일정" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日付・時間・場所がある1回きりの予定"
+          }
+        }
+      }
+    },
+    "남은 %lld · %@ %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "残り%1$lld · %2$@ %3$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "남은 %1$lld · %2$@ %3$@"
+          }
+        }
+      }
+    },
+    "남은 일 %lld" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "残り%lld件"
+          }
+        }
+      }
+    },
+    "남은 일 %lld개: %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "残り%1$lld件：%2$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "남은 일 %1$lld개: %2$@"
+          }
+        }
+      }
+    },
+    "내 이름" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自分の名前"
+          }
+        }
+      }
+    },
+    "내일 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "明日 %@"
+          }
+        }
+      }
+    },
+    "누구와 무엇을" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "誰と何を"
+          }
+        }
+      }
+    },
+    "누르면 고른 루틴을 바로 기록해요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "タップすると選んだルーティンをすぐ記録します。"
+          }
+        }
+      }
+    },
+    "다가오는 것" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "これからの予定"
+          }
+        }
+      }
+    },
+    "다음 주 금요일 저녁 7시 강남역에서 유진이랑 저녁" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "来週金曜の夜7時に渋谷でゆうきと夕食"
+          }
+        }
+      }
+    },
+    "단위" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "単位"
+          }
+        }
+      }
+    },
+    "닫기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "閉じる"
+          }
+        }
+      }
+    },
+    "달력" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カレンダー"
+          }
+        }
+      }
+    },
+    "달린 날 오늘 목록에서 눌러 거리를 적어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "走った日に今日のリストでタップして距離を入力します。"
+          }
+        }
+      }
+    },
+    "달성 %lld%%" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "達成 %lld%%"
+          }
+        }
+      }
+    },
+    "당일에만" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "当日だけ"
+          }
+        }
+      }
+    },
+    "대화가 길어져서 새로 시작할게요. 다시 말해 주세요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "会話が長くなったので、新しく始めます。もう一度話しかけてください。"
+          }
+        }
+      }
+    },
+    "더하기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追加"
+          }
+        }
+      }
+    },
+    "두 번 탭하면 자세히 볼 수 있어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ダブルタップで詳しく見られます"
+          }
+        }
+      }
+    },
+    "러닝" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ランニング"
+          }
+        }
+      }
+    },
+    "러닝·유산소" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ランニング・有酸素"
+          }
+        }
+      }
+    },
+    "루틴" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティン"
+          }
+        }
+      }
+    },
+    "루틴 %lld개를 불러왔어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンを%lld件読み込みました。"
+          }
+        }
+      }
+    },
+    "루틴 ID" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンID"
+          }
+        }
+      }
+    },
+    "루틴 고르기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンを選ぶ"
+          }
+        }
+      }
+    },
+    "루틴 기록" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンを記録"
+          }
+        }
+      }
+    },
+    "루틴 기록하기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンを記録する"
+          }
+        }
+      }
+    },
+    "루틴 삭제" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンを削除"
+          }
+        }
+      }
+    },
+    "루틴 설정에서 Screen Time 권한을 켜야 사용 시간이 보여요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティン設定でスクリーンタイムの権限をオンにすると、使用時間が表示されます"
+          }
+        }
+      }
+    },
+    "루틴 수정" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンを編集"
+          }
+        }
+      }
+    },
+    "루틴 체크" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンをチェック"
+          }
+        }
+      }
+    },
+    "루틴 추가" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンを追加"
+          }
+        }
+      }
+    },
+    "루틴별 잔디와 오늘 남은 일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンごとの草と今日の残り"
+          }
+        }
+      }
+    },
+    "루틴을 공유하면 서로의 오늘 진행량과 '공부 중' 상태를 볼 수 있어요. 정한 시간이 되면 같이 알림이 와요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンを共有すると、お互いの今日の進み具合と「勉強中」の状態が見られます。決めた時間になると一緒に通知が来ます。"
+          }
+        }
+      }
+    },
+    "루틴을 찾지 못했어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンが見つかりませんでした。"
+          }
+        }
+      }
+    },
+    "루틴을 했다고 기록해요. 러닝·공부는 양도 함께 적을 수 있어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンをやったと記録します。ランニング・勉強は量も一緒に入力できます。"
+          }
+        }
+      }
+    },
+    "루틴이나 일정을 말해 보세요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンや予定を話しかけてください"
+          }
+        }
+      }
+    },
+    "마지막 자동 백업 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最後の自動バックアップ %@"
+          }
+        }
+      }
+    },
+    "마지막으로 한 날" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最後にやった日"
+          }
+        }
+      }
+    },
+    "만드는 중…" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "作成中…"
+          }
+        }
+      }
+    },
+    "만들기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "作成"
+          }
+        }
+      }
+    },
+    "말로 루틴을 만들고, 기록하고, 물어보세요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "話しかけてルーティンを作ったり、記録したり、質問したりできます。"
+          }
+        }
+      }
+    },
+    "매일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎日"
+          }
+        }
+      }
+    },
+    "매일 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎日 %@"
+          }
+        }
+      }
+    },
+    "매일 아침 8시에 비타민 먹기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎朝8時にビタミンを飲む"
+          }
+        }
+      }
+    },
+    "매일 정해진 시간에 복용" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎日決まった時間に服用"
+          }
+        }
+      }
+    },
+    "매일 체크" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎日チェック"
+          }
+        }
+      }
+    },
+    "매일·주기·주간 자유롭게" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "毎日・周期・週間を自由に"
+          }
+        }
+      }
+    },
+    "먼저 이름을 정해 주세요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まず名前を決めてください"
+          }
+        }
+      }
+    },
+    "몇 주·달에 한 번" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "数週間・数か月に1回"
+          }
+        }
+      }
+    },
+    "모무리쿤, %@. 오늘 %lld%% 달성" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "モムリくん、%1$@。今日%2$lld%%達成"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "모무리쿤, %1$@. 오늘 %2$lld%% 달성"
+          }
+        }
+      }
+    },
+    "목" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "木"
+          }
+        }
+      }
+    },
+    "목표 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目標 %@"
+          }
+        }
+      }
+    },
+    "목표 초과" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目標超過"
+          }
+        }
+      }
+    },
+    "목표까지 %@%@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目標まで%1$@%2$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "목표까지 %1$@%2$@"
+          }
+        }
+      }
+    },
+    "목표를 못 채웠으면 알림" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目標に届かなければ通知"
+          }
+        }
+      }
+    },
+    "목표의 80%와 100%에 알리고, 목표 안에서 끝난 날이 자동으로 채워져요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "目標の80%と100%でお知らせし、目標内で終わった日は自動で記録されます。"
+          }
+        }
+      }
+    },
+    "무엇을 할까요?" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "何をしますか？"
+          }
+        }
+      }
+    },
+    "무음 모드여도 알람처럼 울려요. 알람의 '완료'를 누르면 바로 기록돼요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "マナーモードでもアラームのように鳴ります。アラームの「完了」を押すとすぐ記録されます。"
+          }
+        }
+      }
+    },
+    "미리 알림" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "事前通知"
+          }
+        }
+      }
+    },
+    "바꾸기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "置き換える"
+          }
+        }
+      }
+    },
+    "반려견" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "愛犬"
+          }
+        }
+      }
+    },
+    "반복" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "繰り返し"
+          }
+        }
+      }
+    },
+    "백업" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バックアップ"
+          }
+        }
+      }
+    },
+    "백업 파일 내보내기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バックアップファイルを書き出す"
+          }
+        }
+      }
+    },
+    "백업 파일 불러오기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バックアップファイルを読み込む"
+          }
+        }
+      }
+    },
+    "백업 파일을 저장했어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バックアップファイルを保存しました。"
+          }
+        }
+      }
+    },
+    "버리기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "破棄"
+          }
+        }
+      }
+    },
+    "보내기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "送る"
+          }
+        }
+      }
+    },
+    "복용 시간" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服用時間"
+          }
+        }
+      }
+    },
+    "복용 시간 추가" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "服用時間を追加"
+          }
+        }
+      }
+    },
+    "삭제" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "削除"
+          }
+        }
+      }
+    },
+    "상대에게 보일 이름" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "相手に表示する名前"
+          }
+        }
+      }
+    },
+    "새 루틴" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しいルーティン"
+          }
+        }
+      }
+    },
+    "새 루틴 만들기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しいルーティンを作成"
+          }
+        }
+      }
+    },
+    "새 약속" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "新しい予定"
+          }
+        }
+      }
+    },
+    "생각하는 중…" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "考え中…"
+          }
+        }
+      }
+    },
+    "샴푸, 심장사상충, 접종" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シャンプー、フィラリア、ワクチン"
+          }
+        }
+      }
+    },
+    "샴푸, 심장사상충…" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シャンプー、フィラリア…"
+          }
+        }
+      }
+    },
+    "서버에 연결할 수 없어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サーバーに接続できません"
+          }
+        }
+      }
+    },
+    "설정" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定"
+          }
+        }
+      }
+    },
+    "설정 > Apple Intelligence를 켜면 쓸 수 있어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定 > Apple Intelligence をオンにすると使えます。"
+          }
+        }
+      }
+    },
+    "설정 앱의 momuri > 언어에서 한국어·일본어를 바꿀 수 있어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "設定アプリの momuri > 言語 で、韓国語と日本語を切り替えられます。"
+          }
+        }
+      }
+    },
+    "세는 앱·카테고리" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カウントするアプリ・カテゴリ"
+          }
+        }
+      }
+    },
+    "세트 추가" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "セットを追加"
+          }
+        }
+      }
+    },
+    "수" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "水"
+          }
+        }
+      }
+    },
+    "수정" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "編集"
+          }
+        }
+      }
+    },
+    "순서: %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "順番：%@"
+          }
+        }
+      }
+    },
+    "쉬기 취소" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休みを取り消す"
+          }
+        }
+      }
+    },
+    "쉬는 날" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休みの日"
+          }
+        }
+      }
+    },
+    "쉬는 날은 해야 할 날에서 빠져서 잔디가 끊기지 않아요. 그날그날은 목록에서 길게 눌러 '오늘은 쉬기'도 돼요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休みの日はやるべき日から外れるので、草が途切れません。その日ごとに、リストで長押しして「今日は休む」もできます。"
+          }
+        }
+      }
+    },
+    "쉬는 요일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休みの曜日"
+          }
+        }
+      }
+    },
+    "쉬는 중이에요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "休み中です"
+          }
+        }
+      }
+    },
+    "시작" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "開始"
+          }
+        }
+      }
+    },
+    "시험" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試験"
+          }
+        }
+      }
+    },
+    "시험 %lld월 %lld일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試験 %1$lld月%2$lld日"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "시험 %1$lld월 %2$lld일"
+          }
+        }
+      }
+    },
+    "시험 %lld일 전이에요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試験の%lld日前です"
+          }
+        }
+      }
+    },
+    "시험 D-day와 매일 목표, 같이 공부" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試験のD-dayと毎日の目標、一緒に勉強"
+          }
+        }
+      }
+    },
+    "시험일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試験日"
+          }
+        }
+      }
+    },
+    "시험일 정하기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "試験日を決める"
+          }
+        }
+      }
+    },
+    "식단" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "食事管理"
+          }
+        }
+      }
+    },
+    "식사" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "食事"
+          }
+        }
+      }
+    },
+    "식사 %lld시간 · 금식 %lld시간. 시작·종료 30분 전·금식 시작에 알려요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "食事%1$lld時間 · 断食%2$lld時間。開始・終了30分前・断食開始にお知らせします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "식사 %1$lld시간 · 금식 %2$lld시간. 시작·종료 30분 전·금식 시작에 알려요."
+          }
+        }
+      }
+    },
+    "식사 시간" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "食事時間"
+          }
+        }
+      }
+    },
+    "식사 시간 시작 · %@까지" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "食事時間開始 · %@まで"
+          }
+        }
+      }
+    },
+    "식사 시간대" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "食事の時間帯"
+          }
+        }
+      }
+    },
+    "식사 시간대와 금식" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "食事の時間帯と断食"
+          }
+        }
+      }
+    },
+    "식사 종료 30분 전이에요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "食事終了の30分前です"
+          }
+        }
+      }
+    },
+    "아래에서 종목을 고르면 세트를 적을 수 있어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下で種目を選ぶとセットを入力できます"
+          }
+        }
+      }
+    },
+    "아직 기록이 없어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだ記録がありません"
+          }
+        }
+      }
+    },
+    "아직 루틴이 없어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだルーティンがありません。"
+          }
+        }
+      }
+    },
+    "아직 안 함" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだしていない"
+          }
+        }
+      }
+    },
+    "아직 안 했어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだやっていません"
+          }
+        }
+      }
+    },
+    "아직 참여한 사람이 없어요. 루틴 설정에서 초대 코드를 보내요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "まだ参加した人がいません。ルーティン設定から招待コードを送りましょう。"
+          }
+        }
+      }
+    },
+    "알겠어요. 기록하지 않았어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "わかりました。記録しませんでした。"
+          }
+        }
+      }
+    },
+    "알람에서 완료" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アラームから完了"
+          }
+        }
+      }
+    },
+    "알람으로 울리기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アラームで鳴らす"
+          }
+        }
+      }
+    },
+    "알림" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知"
+          }
+        }
+      }
+    },
+    "알림 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知 %@"
+          }
+        }
+      }
+    },
+    "알림 시간" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "通知時間"
+          }
+        }
+      }
+    },
+    "앱 %lld · 카테고리 %lld" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリ %1$lld · カテゴリ %2$lld"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "앱 %1$lld · 카테고리 %2$lld"
+          }
+        }
+      }
+    },
+    "앱에서 루틴을 추가해 주세요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アプリでルーティンを追加してください"
+          }
+        }
+      }
+    },
+    "약 이름" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "薬の名前"
+          }
+        }
+      }
+    },
+    "약·영양제" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "薬・サプリ"
+          }
+        }
+      }
+    },
+    "약속" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "予定"
+          }
+        }
+      }
+    },
+    "약속 수정" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "予定を編集"
+          }
+        }
+      }
+    },
+    "약속 추가" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "予定を追加"
+          }
+        }
+      }
+    },
+    "약속·일정" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "予定・スケジュール"
+          }
+        }
+      }
+    },
+    "약속으로 만들까요?" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "予定として作りますか？"
+          }
+        }
+      }
+    },
+    "양 (km, 문제 수 등)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "量（km、問題数など）"
+          }
+        }
+      }
+    },
+    "어디서" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どこで"
+          }
+        }
+      }
+    },
+    "어떤 루틴이 궁금한지 이름을 넣어 주세요. 예: 이번 달 러닝 얼마나 했어?" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どのルーティンについて知りたいか、名前を入れてください（簡易モードは韓国語のみ）。例：이번 달 러닝 얼마나 했어?"
+          }
+        }
+      }
+    },
+    "어떤 루틴인가요?" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "どんなルーティンですか？"
+          }
+        }
+      }
+    },
+    "언어" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "言語"
+          }
+        }
+      }
+    },
+    "언제" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "いつ"
+          }
+        }
+      }
+    },
+    "연속" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "連続"
+          }
+        }
+      }
+    },
+    "예정일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "予定日"
+          }
+        }
+      }
+    },
+    "예정일이 평일이면 그 주 토·일 중에 하면 돼요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "予定日が平日なら、その週の土・日のどちらかにやればOKです"
+          }
+        }
+      }
+    },
+    "오늘" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日"
+          }
+        }
+      }
+    },
+    "오늘 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日 %@"
+          }
+        }
+      }
+    },
+    "오늘 %@ · 목표까지 %@%@ 남았어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日 %1$@ · 目標まであと%2$@%3$@です"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "오늘 %1$@ · 목표까지 %2$@%3$@ 남았어요"
+          }
+        }
+      }
+    },
+    "오늘 %lld/%lld" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日 %1$lld/%2$lld"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "오늘 %1$lld/%2$lld"
+          }
+        }
+      }
+    },
+    "오늘 %lld개 끝냄, 전체 %lld개" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日%1$lld件完了、全%2$lld件"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "오늘 %1$lld개 끝냄, 전체 %2$lld개"
+          }
+        }
+      }
+    },
+    "오늘 남은 일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日の残り"
+          }
+        }
+      }
+    },
+    "오늘 남은 일과 놓친 일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日の残りとやり忘れ"
+          }
+        }
+      }
+    },
+    "오늘 목표 %@%@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日の目標 %1$@%2$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "오늘 목표 %1$@%2$@"
+          }
+        }
+      }
+    },
+    "오늘 목표 %@을 넘었어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日の目標%@を超えました"
+          }
+        }
+      }
+    },
+    "오늘 목표 %@의 80%%를 썼어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日の目標%@の80%%を使いました"
+          }
+        }
+      }
+    },
+    "오늘 목표를 채웠어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日の目標を達成しました"
+          }
+        }
+      }
+    },
+    "오늘 아직 안 한 루틴과 약속을 알려줘요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日まだやっていないルーティンと予定を教えます。"
+          }
+        }
+      }
+    },
+    "오늘 한 부위를 고르면 세트를 적을 수 있어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日やった部位を選ぶとセットを入力できます"
+          }
+        }
+      }
+    },
+    "오늘 할 일 끝" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日のタスク完了"
+          }
+        }
+      }
+    },
+    "오늘 할 일을 다 끝냈어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日のタスクをすべて終えました"
+          }
+        }
+      }
+    },
+    "오늘 할 일을 다 했어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日のタスクはすべて終わりました。"
+          }
+        }
+      }
+    },
+    "오늘 할 차례예요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日やる番です"
+          }
+        }
+      }
+    },
+    "오늘은 쉬기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日は休む"
+          }
+        }
+      }
+    },
+    "오늘은 할 일이 없어요. 푹 쉬어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日はやることがありません。ゆっくり休みましょう。"
+          }
+        }
+      }
+    },
+    "오늘이에요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今日です"
+          }
+        }
+      }
+    },
+    "오른쪽 위 + 로 첫 루틴을 만들어 보세요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "右上の + で最初のルーティンを作ってみましょう"
+          }
+        }
+      }
+    },
+    "완료" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了"
+          }
+        }
+      }
+    },
+    "완료·쉼 %lld개" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "完了・休み %lld件"
+          }
+        }
+      }
+    },
+    "요즘 자주 놓쳐요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近よく忘れています"
+          }
+        }
+      }
+    },
+    "요즘 자주 놓쳐요: %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近よく忘れています：%@"
+          }
+        }
+      }
+    },
+    "운동" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ワークアウト"
+          }
+        }
+      }
+    },
+    "월" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "月"
+          }
+        }
+      }
+    },
+    "응원 보내기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "応援を送る"
+          }
+        }
+      }
+    },
+    "응원 보냄" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "応援済み"
+          }
+        }
+      }
+    },
+    "이 기기는 Apple Intelligence를 지원하지 않아요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この端末は Apple Intelligence に対応していません。"
+          }
+        }
+      }
+    },
+    "이 날 기록 지우기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この日の記録を消す"
+          }
+        }
+      }
+    },
+    "이 루틴 공유를 그만할까요? 내 기록은 그대로 남아요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このルーティンの共有をやめますか？自分の記録はそのまま残ります。"
+          }
+        }
+      }
+    },
+    "이 루틴과 기록을 모두 삭제할까요?" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "このルーティンと記録をすべて削除しますか？"
+          }
+        }
+      }
+    },
+    "이 부위 기록 취소" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この部位の記録を取り消す"
+          }
+        }
+      }
+    },
+    "이 부위 기록과 세트를 모두 지울까요?" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この部位の記録とセットをすべて消しますか？"
+          }
+        }
+      }
+    },
+    "이렇게 만들까요?" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "この内容で作りますか？"
+          }
+        }
+      }
+    },
+    "이름을 적어 주세요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前を入力してください"
+          }
+        }
+      }
+    },
+    "이번 달" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今月"
+          }
+        }
+      }
+    },
+    "이번 달 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今月 %@"
+          }
+        }
+      }
+    },
+    "이번 달 러닝 얼마나 했어?" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今月ランニングどれくらいした？"
+          }
+        }
+      }
+    },
+    "이번 달 목표" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今月の目標"
+          }
+        }
+      }
+    },
+    "이번 주" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今週"
+          }
+        }
+      }
+    },
+    "이번 주 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今週 %@"
+          }
+        }
+      }
+    },
+    "이번 주 남은 항목: %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今週残りの項目：%@"
+          }
+        }
+      }
+    },
+    "이번 주 완료" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今週は完了"
+          }
+        }
+      }
+    },
+    "이번 주말" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今週末"
+          }
+        }
+      }
+    },
+    "이번 주말에 할 차례예요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今週末にやる番です"
+          }
+        }
+      }
+    },
+    "이번 주에 채울 항목" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今週こなす項目"
+          }
+        }
+      }
+    },
+    "이해하지 못했어요. 예: '약 먹었어', '매일 아침 8시 비타민', '다음 주 금요일 7시 저녁 약속', '이번 달 러닝 얼마나 했어?'" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "うまく理解できませんでした。簡易モードでは韓国語の短い文だけ理解できます。例：'약 먹었어'、'매일 아침 8시 비타민'、'다음 주 금요일 7시 저녁 약속'、'이번 달 러닝 얼마나 했어?'"
+          }
+        }
+      }
+    },
+    "일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "日"
+          }
+        }
+      }
+    },
+    "자격증 공부" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "資格の勉強"
+          }
+        }
+      }
+    },
+    "자동 백업: 하루 한 번 파일 앱 > 나의 iPhone > momuri > 백업 에 저장돼요 (최근 14일)." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自動バックアップ：1日1回、ファイルApp > このiPhone内 > momuri > 백업 に保存されます（直近14日分）。"
+          }
+        }
+      }
+    },
+    "자주 하는 것" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "よくやること"
+          }
+        }
+      }
+    },
+    "장소 (선택)" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "場所（任意）"
+          }
+        }
+      }
+    },
+    "저장" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "保存"
+          }
+        }
+      }
+    },
+    "전체를 세려면 카테고리를 모두 골라요. Screen Time 권한이 필요해요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "すべてをカウントするには、カテゴリをすべて選びます。スクリーンタイムの権限が必要です。"
+          }
+        }
+      }
+    },
+    "접기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "折りたたむ"
+          }
+        }
+      }
+    },
+    "정각" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ちょうど"
+          }
+        }
+      }
+    },
+    "정보처리기사, 토익…" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "基本情報技術者、TOEIC…"
+          }
+        }
+      }
+    },
+    "제모, 미용실, 피부과…" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "脱毛、美容院、皮膚科…"
+          }
+        }
+      }
+    },
+    "제모, 미용실처럼 주기적으로" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "脱毛、美容院のように定期的に"
+          }
+        }
+      }
+    },
+    "종목 추가" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "種目を追加"
+          }
+        }
+      }
+    },
+    "종목별 최고 기록" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "種目別ベスト記録"
+          }
+        }
+      }
+    },
+    "주" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "週間"
+          }
+        }
+      }
+    },
+    "주간" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "週間"
+          }
+        }
+      }
+    },
+    "주기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "周期"
+          }
+        }
+      }
+    },
+    "주말 예정" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "週末の予定"
+          }
+        }
+      }
+    },
+    "주말에 맞추기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "週末に合わせる"
+          }
+        }
+      }
+    },
+    "지금" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今"
+          }
+        }
+      }
+    },
+    "지금 같이 공부할 시간이에요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今、一緒に勉強する時間です"
+          }
+        }
+      }
+    },
+    "지금 기록을 모두 지우고 백업으로 바꿀까요?" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今の記録をすべて消して、バックアップに置き換えますか？"
+          }
+        }
+      }
+    },
+    "지금은 AI를 쓸 수 없어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "今はAIを使えません。"
+          }
+        }
+      }
+    },
+    "지난번 %@ · %lld세트" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "前回 %1$@ · %2$lldセット"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "지난번 %1$@ · %2$lld세트"
+          }
+        }
+      }
+    },
+    "지남" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "過ぎた"
+          }
+        }
+      }
+    },
+    "지우기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "消す"
+          }
+        }
+      }
+    },
+    "직접" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カスタム"
+          }
+        }
+      }
+    },
+    "직접 입력" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直接入力"
+          }
+        }
+      }
+    },
+    "직접 추가" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "自分で追加"
+          }
+        }
+      }
+    },
+    "참여하기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "参加する"
+          }
+        }
+      }
+    },
+    "참여하는 중…" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "参加中…"
+          }
+        }
+      }
+    },
+    "초과" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "超過"
+          }
+        }
+      }
+    },
+    "초대 보내기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "招待を送る"
+          }
+        }
+      }
+    },
+    "초대 코드" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "招待コード"
+          }
+        }
+      }
+    },
+    "초대 코드로 참여" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "招待コードで参加"
+          }
+        }
+      }
+    },
+    "초대 코드를 보내면 상대도 같은 루틴을 갖고, 서로의 기록을 볼 수 있어요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "招待コードを送ると、相手も同じルーティンを持ち、お互いの記録を見られます。"
+          }
+        }
+      }
+    },
+    "최고 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ベスト %@"
+          }
+        }
+      }
+    },
+    "최근 2주" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直近2週間"
+          }
+        }
+      }
+    },
+    "최근 30일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直近30日"
+          }
+        }
+      }
+    },
+    "최근 3주" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直近3週間"
+          }
+        }
+      }
+    },
+    "최근 4주" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直近4週間"
+          }
+        }
+      }
+    },
+    "최근 4주 달성" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直近4週間の達成"
+          }
+        }
+      }
+    },
+    "최근 7일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "直近7日"
+          }
+        }
+      }
+    },
+    "최근 기록" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "最近の記録"
+          }
+        }
+      }
+    },
+    "추가" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追加"
+          }
+        }
+      }
+    },
+    "추가했어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "追加しました"
+          }
+        }
+      }
+    },
+    "취소" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "キャンセル"
+          }
+        }
+      }
+    },
+    "카드를 누르면 자세히 볼 수 있어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "カードをタップすると詳しく見られます"
+          }
+        }
+      }
+    },
+    "켜 두면 같이 공부하는 사람에게 '공부 중'으로 보여요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オンにすると、一緒に勉強している人に「勉強中」と表示されます"
+          }
+        }
+      }
+    },
+    "코드로 참여" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "コードで参加"
+          }
+        }
+      }
+    },
+    "토" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "土"
+          }
+        }
+      }
+    },
+    "평온해요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "おだやか"
+          }
+        }
+      }
+    },
+    "폰 사용" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スマホ使用"
+          }
+        }
+      }
+    },
+    "필수" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "必須"
+          }
+        }
+      }
+    },
+    "하루 %@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1日 %@"
+          }
+        }
+      }
+    },
+    "하루 %@%@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1日 %1$@%2$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "하루 %1$@%2$@"
+          }
+        }
+      }
+    },
+    "하루 %@문제" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1日 %@問"
+          }
+        }
+      }
+    },
+    "하루 목표" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1日の目標"
+          }
+        }
+      }
+    },
+    "하루 사용 시간 목표" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1日の使用時間の目標"
+          }
+        }
+      }
+    },
+    "하루 전" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1日前"
+          }
+        }
+      }
+    },
+    "하루 종일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "終日"
+          }
+        }
+      }
+    },
+    "한 날 오늘 목록에서 체크해요." : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "やった日に今日のリストでチェックします。"
+          }
+        }
+      }
+    },
+    "한 달" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1か月"
+          }
+        }
+      }
+    },
+    "한 달 %@%@" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1か月 %1$@%2$@"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "한 달 %1$@%2$@"
+          }
+        }
+      }
+    },
+    "한 달 %@km" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1か月 %@km"
+          }
+        }
+      }
+    },
+    "한 달 목표 거리·횟수" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1か月の目標距離・回数"
+          }
+        }
+      }
+    },
+    "한 주에 부위 채우기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1週間で部位を埋める"
+          }
+        }
+      }
+    },
+    "한 주에 채우기" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1週間で埋める"
+          }
+        }
+      }
+    },
+    "할 시간이에요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "やる時間です"
+          }
+        }
+      }
+    },
+    "할 일" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "やること"
+          }
+        }
+      }
+    },
+    "할 일이 없어요" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "やることはありません"
+          }
+        }
+      }
+    },
+    "헬스" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "筋トレ"
+          }
+        }
+      }
+    },
+    "헬스 가슴 했어" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "筋トレで胸をやった"
+          }
+        }
+      }
+    },
+    "홈" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ホーム"
+          }
+        }
+      }
+    },
+    "홈 위젯에 표시" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ホームのウィジェットに表示"
+          }
+        }
+      }
+    },
+    "화" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "火"
+          }
+        }
+      }
+    },
+    "확인" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "OK"
+          }
+        }
+      }
+    },
+    "회" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回"
+          }
+        }
+      }
+    },
+    "횟수" : {
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回数"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

@@ -91,20 +91,20 @@ enum RoutineActions {
             let chosen = part.flatMap { p in routine.parts.first { $0.contains(p) || p.contains($0) } }
                 ?? routine.remainingParts(inWeekOf: day).first ?? routine.parts.first ?? ""
             addPart(routine, part: chosen, on: day, in: context)
-            return "\(routine.name) \(chosen) 기록했어요. \(routine.listStatus(on: day))"
+            return String(localized: "\(routine.displayName) \(chosen.localizedValue) 기록했어요. \(routine.listStatus(on: day))")
         }
         if routine.kind == .monthly || routine.category == .study {
             guard let amount else {
                 return routine.kind == .monthly && routine.targetUnit == "회"
-                    ? { addValue(routine, value: 1, on: day, in: context); return "\(routine.name) 기록했어요. \(routine.listStatus(on: day))" }()
-                    : "\(routine.name)은 양을 같이 말해 주세요. 예: 5km, 20문제"
+                    ? { addValue(routine, value: 1, on: day, in: context); return String(localized: "\(routine.displayName) 기록했어요. \(routine.listStatus(on: day))") }()
+                    : String(localized: "\(routine.displayName)은 양을 같이 말해 주세요. 예: 5km, 20문제")
             }
             addValue(routine, value: amount, on: day, in: context)
-            return "\(routine.name) \(Routine.format(amount)) 기록했어요. 지금 \(routine.listStatus(on: day))"
+            return String(localized: "\(routine.displayName) \(Routine.format(amount)) 기록했어요. 지금 \(routine.listStatus(on: day))")
         }
-        if routine.isDone(on: day) { return "\(routine.name)은 이미 기록돼 있어요." }
+        if routine.isDone(on: day) { return String(localized: "\(routine.displayName)은 이미 기록돼 있어요.") }
         toggle(routine, on: day, in: context)
-        return "\(routine.name) 기록했어요. \(routine.listStatus(on: day))"
+        return String(localized: "\(routine.displayName) 기록했어요. \(routine.listStatus(on: day))")
     }
 
     /// 저장 후 위젯과 알림을 최신 상태로 맞춘다

@@ -11,8 +11,8 @@ final class ActivityMonitor: DeviceActivityMonitor {
 
         let goal = ScreenTimeShared.label(minutes: ScreenTimeShared.goalMinutes)
         let content = UNMutableNotificationContent()
-        content.title = "폰 사용"
-        content.body = exceeded ? "오늘 목표 \(goal)을 넘었어요" : "오늘 목표 \(goal)의 80%를 썼어요"
+        content.title = String(localized: "폰 사용")
+        content.body = exceeded ? String(localized: "오늘 목표 \(goal)을 넘었어요") : String(localized: "오늘 목표 \(goal)의 80%를 썼어요")
         content.sound = .default
         UNUserNotificationCenter.current().add(UNNotificationRequest(identifier: "screen-\(event.rawValue)", content: content, trigger: nil))
     }

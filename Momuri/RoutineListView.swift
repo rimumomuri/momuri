@@ -46,7 +46,7 @@ struct RoutineListView: View {
                 withAnimation(.snappy(duration: 0.2)) { toggle(name) }
             } label: {
                 HStack(spacing: 6) {
-                    Text(name).font(.caption.weight(.medium))
+                    Text(name.localizedValue).font(.caption.weight(.medium))
                     Text("\(items.count)").font(.caption).foregroundStyle(.tertiary)
                     Spacer()
                     Image(systemName: isCollapsed ? "chevron.down" : "chevron.up").font(.caption2)
@@ -78,7 +78,7 @@ struct RoutineListView: View {
                 .font(.subheadline)
                 .foregroundStyle(.secondary)
                 .frame(width: 22)
-            Text(routine.name).lineLimit(1)
+            Text(routine.displayName).lineLimit(1)
             if routine.shareId != nil {
                 Image(systemName: "person.2").font(.caption2).foregroundStyle(.tertiary)
             }

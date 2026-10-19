@@ -1,0 +1,822 @@
+{
+  "sourceLanguage" : "ko",
+  "strings" : {
+    "JSON 형식이 아니에요" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "JSON形式ではありません"
+          }
+        }
+      }
+    },
+    "days 배열이 필요해요" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "days配列が必要です"
+          }
+        }
+      }
+    },
+    "가슴" : {
+      "comment" : "Stored value: parts (헬스 부위)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "胸"
+          }
+        }
+      }
+    },
+    "건강" : {
+      "comment" : "Stored value: groups (루틴 목록 묶음)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "健康"
+          }
+        }
+      }
+    },
+    "공부" : {
+      "comment" : "Stored value: groups (루틴 목록 묶음)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "勉強"
+          }
+        }
+      }
+    },
+    "공유를 찾을 수 없어요" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "共有が見つかりません"
+          }
+        }
+      }
+    },
+    "관리 · 반려견" : {
+      "comment" : "Stored value: groups (루틴 목록 묶음)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ケア · 愛犬"
+          }
+        }
+      }
+    },
+    "구충제" : {
+      "comment" : "Stored value: routine names (기본·추천 루틴 이름)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "駆虫薬"
+          }
+        }
+      }
+    },
+    "귀 청소" : {
+      "comment" : "Stored value: routine names (기본·추천 루틴 이름)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "耳掃除"
+          }
+        }
+      }
+    },
+    "기타" : {
+      "comment" : "Stored value: groups (루틴 목록 묶음)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "その他"
+          }
+        }
+      }
+    },
+    "너무 커요" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サイズが大きすぎます"
+          }
+        }
+      }
+    },
+    "데드리프트" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "デッドリフト"
+          }
+        }
+      }
+    },
+    "등" : {
+      "comment" : "Stored value: parts (헬스 부위)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "背中"
+          }
+        }
+      }
+    },
+    "딥스" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ディップス"
+          }
+        }
+      }
+    },
+    "랫풀다운" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ラットプルダウン"
+          }
+        }
+      }
+    },
+    "러닝" : {
+      "comment" : "Stored value: routine names (기본·추천 루틴 이름)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ランニング"
+          }
+        }
+      }
+    },
+    "런지" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ランジ"
+          }
+        }
+      }
+    },
+    "레그 레이즈" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レッグレイズ"
+          }
+        }
+      }
+    },
+    "레그 익스텐션" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レッグエクステンション"
+          }
+        }
+      }
+    },
+    "레그 컬" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レッグカール"
+          }
+        }
+      }
+    },
+    "레그프레스" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "レッグプレス"
+          }
+        }
+      }
+    },
+    "루틴 정보가 올바르지 않아요" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ルーティンの情報が正しくありません"
+          }
+        }
+      }
+    },
+    "리어 델트 플라이" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "リアデルトフライ"
+          }
+        }
+      }
+    },
+    "만든 사람만 바꿀 수 있어요" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "作成者だけが変更できます"
+          }
+        }
+      }
+    },
+    "문제" : {
+      "comment" : "Stored value: units (단위)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "問"
+          }
+        }
+      }
+    },
+    "미용" : {
+      "comment" : "Stored value: routine names (기본·추천 루틴 이름)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トリミング"
+          }
+        }
+      }
+    },
+    "바벨 로우" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バーベルロウ"
+          }
+        }
+      }
+    },
+    "바벨 컬" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "バーベルカール"
+          }
+        }
+      }
+    },
+    "발톱 깎기" : {
+      "comment" : "Stored value: routine names (기본·추천 루틴 이름)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "爪切り"
+          }
+        }
+      }
+    },
+    "벤치프레스" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ベンチプレス"
+          }
+        }
+      }
+    },
+    "보낼 사람을 찾을 수 없어요" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "送り先が見つかりません"
+          }
+        }
+      }
+    },
+    "복근" : {
+      "comment" : "Stored value: parts (헬스 부위)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腹筋"
+          }
+        }
+      }
+    },
+    "분" : {
+      "comment" : "Stored value: units (단위)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "分"
+          }
+        }
+      }
+    },
+    "사이드 레터럴 레이즈" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サイドレイズ"
+          }
+        }
+      }
+    },
+    "샴푸" : {
+      "comment" : "Stored value: routine names (기본·추천 루틴 이름)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シャンプー"
+          }
+        }
+      }
+    },
+    "서버 오류" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "サーバーエラー"
+          }
+        }
+      }
+    },
+    "스쿼트" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スクワット"
+          }
+        }
+      }
+    },
+    "시간 형식이 아니에요" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "時間の形式ではありません"
+          }
+        }
+      }
+    },
+    "시티드 로우" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "シーテッドロウ"
+          }
+        }
+      }
+    },
+    "식단" : {
+      "comment" : "Stored value: routine names (기본·추천 루틴 이름)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "食事管理"
+          }
+        }
+      }
+    },
+    "심장사상충 약" : {
+      "comment" : "Stored value: routine names (기본·추천 루틴 이름)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "フィラリアの薬"
+          }
+        }
+      }
+    },
+    "약속" : {
+      "comment" : "Stored value: routine names (기본·추천 루틴 이름) / Stored value: groups (루틴 목록 묶음)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "予定"
+          }
+        }
+      }
+    },
+    "어깨" : {
+      "comment" : "Stored value: parts (헬스 부위)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "肩"
+          }
+        }
+      }
+    },
+    "업라이트 로우" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "アップライトロウ"
+          }
+        }
+      }
+    },
+    "오버헤드 익스텐션" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーバーヘッドエクステンション"
+          }
+        }
+      }
+    },
+    "오버헤드 프레스" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "オーバーヘッドプレス"
+          }
+        }
+      }
+    },
+    "유산소" : {
+      "comment" : "Stored value: parts (헬스 부위)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "有酸素"
+          }
+        }
+      }
+    },
+    "이름이 필요해요" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "名前が必要です"
+          }
+        }
+      }
+    },
+    "인증이 필요해요" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "認証が必要です"
+          }
+        }
+      }
+    },
+    "인클라인 덤벨프레스" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "インクラインダンベルプレス"
+          }
+        }
+      }
+    },
+    "잠시 뒤에 다시 시도해 주세요" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "しばらくしてからもう一度お試しください"
+          }
+        }
+      }
+    },
+    "조금 뒤에 다시 보내 주세요" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "少ししてからもう一度送ってください"
+          }
+        }
+      }
+    },
+    "종합 백신" : {
+      "comment" : "Stored value: routine names (기본·추천 루틴 이름)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "混合ワクチン"
+          }
+        }
+      }
+    },
+    "체스트 플라이" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "チェストフライ"
+          }
+        }
+      }
+    },
+    "초대 코드를 찾을 수 없어요" : {
+      "comment" : "Stored value: server errors (server/index.js)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "招待コードが見つかりません"
+          }
+        }
+      }
+    },
+    "크런치" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "クランチ"
+          }
+        }
+      }
+    },
+    "트라이셉스 푸시다운" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "トライセプスプッシュダウン"
+          }
+        }
+      }
+    },
+    "팔" : {
+      "comment" : "Stored value: parts (헬스 부위)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腕"
+          }
+        }
+      }
+    },
+    "페이지" : {
+      "comment" : "Stored value: units (단위)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ページ"
+          }
+        }
+      }
+    },
+    "폰 사용" : {
+      "comment" : "Stored value: routine names (기본·추천 루틴 이름)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "スマホ使用"
+          }
+        }
+      }
+    },
+    "푸시업" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "腕立て伏せ"
+          }
+        }
+      }
+    },
+    "풀업" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "懸垂"
+          }
+        }
+      }
+    },
+    "플랭크" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "プランク"
+          }
+        }
+      }
+    },
+    "하체" : {
+      "comment" : "Stored value: parts (헬스 부위)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "下半身"
+          }
+        }
+      }
+    },
+    "해머 컬" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ハンマーカール"
+          }
+        }
+      }
+    },
+    "행잉 레그 레이즈" : {
+      "comment" : "Stored value: exercises (종목 추천)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "ハンギングレッグレイズ"
+          }
+        }
+      }
+    },
+    "헬스" : {
+      "comment" : "Stored value: routine names (기본·추천 루틴 이름)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "筋トレ"
+          }
+        }
+      }
+    },
+    "회" : {
+      "comment" : "Stored value: units (단위)",
+      "extractionState" : "manual",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "回"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

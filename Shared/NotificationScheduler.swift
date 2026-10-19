@@ -35,20 +35,20 @@ enum NotificationScheduler {
                 for offset in 0..<7 {
                     guard let day = cal.date(byAdding: .day, value: offset, to: today) else { continue }
                     if r.studyTogether, let t = at(day, r.studyStart / 60, r.studyStart % 60) {
-                        items.append((t, "\(key)-\(offset)-together", r.name, "같이 공부할 시간이에요 · \(r.studyTimeLabel)"))
+                        items.append((t, "\(key)-\(offset)-together", r.displayName, String(localized: "같이 공부할 시간이에요 · \(r.studyTimeLabel)")))
                     }
                     guard !r.isSettled(on: day), let t = at(day, r.reminderHour, r.reminderMinute) else { continue }
                     let body = offset == 0
-                        ? "오늘 \(r.studyProgress(on: day)) · 목표까지 \(Routine.format(max(r.studyGoal - r.dayTotal(on: day), 0)))\(r.studyUnit) 남았어요"
-                        : "오늘 목표 \(Routine.format(r.studyGoal))\(r.studyUnit)"
-                    items.append((t, "\(key)-\(offset)-goal", r.name, body + (r.examLabel.map { " · 시험 " + $0 } ?? "")))
+                        ? String(localized: "오늘 \(r.studyProgress(on: day)) · 목표까지 \(Routine.format(max(r.studyGoal - r.dayTotal(on: day), 0)))\(r.studyUnit.localizedValue) 남았어요")
+                        : String(localized: "오늘 목표 \(Routine.format(r.studyGoal))\(r.studyUnit.localizedValue)")
+                    items.append((t, "\(key)-\(offset)-goal", r.displayName, body + (r.examLabel.map { String(localized: " · 시험 \($0)") } ?? "")))
                 }
                 // 시험 30·7·1일 전 아침
                 if let exam = r.examDate {
                     for before in [30, 7, 1] {
                         guard let day = cal.date(byAdding: .day, value: -before, to: cal.startOfDay(for: exam)),
                               let t = at(day, 9, 0) else { continue }
-                        items.append((t, "\(key)-exam-\(before)", r.name, "시험 \(before)일 전이에요"))
+                        items.append((t, "\(key)-exam-\(before)", r.displayName, String(localized: "시험 \(before)일 전이에요")))
                     }
                 }
                 continue
@@ -60,14 +60,14 @@ enum NotificationScheduler {
                     let open = Routine.timeLabel(r.windowStart)
                     let close = Routine.timeLabel(r.windowEnd)
                     if let t = at(day, r.windowStart / 60, r.windowStart % 60) {
-                        items.append((t, "\(key)-\(offset)-open", r.name, "식사 시간 시작 · \(close)까지"))
+                        items.append((t, "\(key)-\(offset)-open", r.displayName, String(localized: "식사 시간 시작 · \(close)까지")))
                     }
                     let before = r.windowEnd - 30
                     if before > r.windowStart, let t = at(day, before / 60, before % 60) {
-                        items.append((t, "\(key)-\(offset)-soon", r.name, "식사 종료 30분 전이에요"))
+                        items.append((t, "\(key)-\(offset)-soon", r.displayName, String(localized: "식사 종료 30분 전이에요")))
                     }
                     if let t = at(day, r.windowEnd / 60, r.windowEnd % 60) {
-                        items.append((t, "\(key)-\(offset)-close", r.name, "금식 시작 · 다음 식사 \(open)"))
+                        items.append((t, "\(key)-\(offset)-close", r.displayName, String(localized: "금식 시작 · 다음 식사 \(open)")))
                     }
                 }
                 continue
@@ -80,11 +80,11 @@ enum NotificationScheduler {
                     guard count < r.times.count else { continue }
                     for (i, minutes) in r.times.enumerated() where i >= count {
                         guard let t = at(day, minutes / 60, minutes % 60) else { continue }
-                        let body = r.times.count > 1 ? "\(i + 1)번째 시간이에요" : "할 시간이에요"
-                        items.append((t, "\(key)-\(offset)-\(i)", r.name, body))
+                        let body = r.times.count > 1 ? String(localized: "\(i + 1)번째 시간이에요") : String(localized: "할 시간이에요")
+                        items.append((t, "\(key)-\(offset)-\(i)", r.displayName, body))
                     }
                     if (r.times.last ?? 0) < nagHour * 60, let t = at(day, nagHour, 0) {
-                        items.append((t, "\(key)-\(offset)-nag", r.name, "아직 안 했어요"))
+                        items.append((t, "\(key)-\(offset)-nag", r.displayName, String(localized: "아직 안 했어요")))
                     }
                 }
             case .interval:
@@ -92,15 +92,15 @@ enum NotificationScheduler {
                 if r.remindDaysBefore > 0,
                    let pre = cal.date(byAdding: .day, value: -r.remindDaysBefore, to: due),
                    let t = at(pre, r.reminderHour, r.reminderMinute) {
-                    items.append((t, "\(key)-pre", r.name, "\(r.remindDaysBefore)일 남았어요"))
+                    items.append((t, "\(key)-pre", r.displayName, String(localized: "\(r.remindDaysBefore)일 남았어요")))
                 }
                 let start = max(due, today)
                 for offset in 0..<7 {
                     guard let day = cal.date(byAdding: .day, value: offset, to: start),
                           let t = at(day, r.reminderHour, r.reminderMinute) else { continue }
                     let late = cal.dateComponents([.day], from: r.dueEnd ?? due, to: day).day ?? 0
-                    let body = late > 0 ? "\(late)일 지났어요" : r.weekendOnly ? "이번 주말에 할 차례예요" : "오늘 할 차례예요"
-                    items.append((t, "\(key)-due-\(offset)", r.name, body))
+                    let body = late > 0 ? String(localized: "\(late)일 지났어요") : r.weekendOnly ? String(localized: "이번 주말에 할 차례예요") : String(localized: "오늘 할 차례예요")
+                    items.append((t, "\(key)-due-\(offset)", r.displayName, body))
                 }
             case .weekly:
                 // 남은 날보다 남은 항목이 많아 빠듯할 때만 알린다
@@ -113,7 +113,7 @@ enum NotificationScheduler {
                           let day = cal.date(byAdding: .day, value: offset, to: today),
                           !(offset == 0 && r.isDone(on: today)),
                           let t = at(day, r.reminderHour, r.reminderMinute) else { continue }
-                    items.append((t, "\(key)-week-\(offset)", r.name, "이번 주 남은 항목: " + remaining.joined(separator: ", ")))
+                    items.append((t, "\(key)-week-\(offset)", r.displayName, String(localized: "이번 주 남은 항목: \(remaining.map(\.localizedValue).joined(separator: ", "))")))
                 }
             case .monthly:
                 continue
@@ -121,13 +121,13 @@ enum NotificationScheduler {
                 guard !r.isDone(on: r.eventDate) else { continue }
                 let place = r.location.isEmpty ? "" : " · " + r.location
                 if r.allDay {
-                    if let t = at(r.eventDate, 9, 0) { items.append((t, "\(key)-once-day", r.name, "오늘이에요" + place)) }
+                    if let t = at(r.eventDate, 9, 0) { items.append((t, "\(key)-once-day", r.displayName, String(localized: "오늘이에요") + place)) }
                     continue
                 }
                 for offset in r.remindOffsets {
                     let t = r.eventDate.addingTimeInterval(TimeInterval(-offset * 60))
-                    let when = offset == 0 ? "지금" : offset < 60 ? "\(offset)분 후" : offset < 1440 ? "\(offset / 60)시간 후" : "내일 " + r.eventTimeLabel
-                    items.append((t, "\(key)-once-\(offset)", r.name, when + place))
+                    let when = offset == 0 ? String(localized: "지금") : offset < 60 ? String(localized: "\(offset)분 후") : offset < 1440 ? String(localized: "\(offset / 60)시간 후") : String(localized: "내일 \(r.eventTimeLabel)")
+                    items.append((t, "\(key)-once-\(offset)", r.displayName, when + place))
                 }
             }
         }

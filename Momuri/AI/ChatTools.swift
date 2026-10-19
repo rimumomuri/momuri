@@ -60,8 +60,10 @@ enum ChatParse {
         let key = norm(name)
         guard !key.isEmpty else { return nil }
         let named = all.filter { !$0.name.isEmpty && $0.kind != .once }.sorted { $0.sortOrder < $1.sortOrder }
-        return named.first { norm($0.name) == key }
-            ?? named.first { norm($0.name).contains(key) || key.contains(norm($0.name)) }
+        // 추천 이름은 한국어로 저장되므로 화면 이름(번역)으로도 찾는다
+        func names(_ r: Routine) -> [String] { [norm(r.name), norm(r.displayName)] }
+        return named.first { names($0).contains(key) }
+            ?? named.first { names($0).contains { $0.contains(key) || key.contains($0) } }
             ?? named.first { $0.category.title.split(separator: "·").map { norm(String($0)) }.contains(key) }
     }
 }
@@ -191,7 +193,7 @@ struct StatsTool: Tool {
             return targets.prefix(10).map { r in
                 let logs = (r.logs ?? []).filter { $0.date >= start && !$0.skipped }
                 let days = Set(logs.map { cal.startOfDay(for: $0.date) }).count
-                var line = "\(r.name): \(a.period) \(days)일 기록"
+                var line = "\(r.displayName): \(a.period) \(days)일 기록"
                 let total = logs.reduce(0) { $0 + ($1.value ?? 0) }
                 if total > 0 { line += ", 합계 \(Routine.format(total))\(r.category == .study ? r.studyUnit : r.targetUnit)" }
                 if r.kind == .weekly { line += ", 부위 " + logs.compactMap(\.part).joined(separator: "·") }

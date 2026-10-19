@@ -28,7 +28,7 @@ struct StudyLogView: View {
                 .padding(20)
             }
             .scrollDismissesKeyboard(.interactively)
-            .navigationTitle(routine.name)
+            .navigationTitle(routine.displayName)
             .navigationBarTitleDisplayMode(.inline)
             .toolbar { ToolbarItem(placement: .confirmationAction) { Button("완료") { dismiss() } } }
         }
@@ -49,7 +49,7 @@ struct StudyLogView: View {
         return VStack(alignment: .leading, spacing: 12) {
             HStack(alignment: .firstTextBaseline) {
                 Text(Routine.format(total)).font(.system(size: 44, weight: .semibold).monospacedDigit())
-                Text("/ \(Routine.format(routine.studyGoal))\(routine.studyUnit)").font(.title3).foregroundStyle(.secondary)
+                Text("/ \(Routine.format(routine.studyGoal))\(routine.studyUnit.localizedValue)").font(.title3).foregroundStyle(.secondary)
                 Spacer()
                 if let exam = routine.examLabel {
                     VStack(alignment: .trailing, spacing: 2) {
@@ -60,7 +60,7 @@ struct StudyLogView: View {
             }
             ProgressView(value: ratio).tint(.primary)
             Text(total >= routine.studyGoal ? "오늘 목표를 채웠어요"
-                 : "목표까지 \(Routine.format(routine.studyGoal - total))\(routine.studyUnit)")
+                 : "목표까지 \(Routine.format(routine.studyGoal - total))\(routine.studyUnit.localizedValue)")
                 .font(.footnote)
                 .foregroundStyle(.secondary)
         }
@@ -68,7 +68,7 @@ struct StudyLogView: View {
 
     private var addSection: some View {
         VStack(alignment: .leading, spacing: 10) {
-            Text(isToday ? "더하기" : dayTitle + "에 더하기").font(.caption).foregroundStyle(.secondary)
+            Text(isToday ? String(localized: "더하기") : String(localized: "\(dayTitle)에 더하기")).font(.caption).foregroundStyle(.secondary)
             HStack(spacing: 8) {
                 ForEach(quickAmounts, id: \.self) { amount in
                     Button { add(amount) } label: {
@@ -86,7 +86,7 @@ struct StudyLogView: View {
                 TextField("직접 입력", text: $custom)
                     .keyboardType(.decimalPad)
                     .focused($customFocused)
-                Text(routine.studyUnit).foregroundStyle(.secondary)
+                Text(routine.studyUnit.localizedValue).foregroundStyle(.secondary)
                 Button("더하기") {
                     if let value = Double(custom.replacingOccurrences(of: ",", with: ".")), value > 0 { add(value) }
                     custom = ""
@@ -147,7 +147,7 @@ struct StudyLogView: View {
                 Text("같이 공부").font(.caption).foregroundStyle(.secondary)
                 Spacer()
                 if routine.studyTogether {
-                    Text(routine.isStudyTime() ? "지금 같이 공부할 시간이에요" : routine.studyTimeLabel)
+                    Text(routine.isStudyTime() ? String(localized: "지금 같이 공부할 시간이에요") : routine.studyTimeLabel)
                         .font(.caption.weight(routine.isStudyTime() ? .semibold : .regular))
                         .foregroundStyle(routine.isStudyTime() ? .primary : .secondary)
                 }
@@ -169,7 +169,7 @@ struct StudyLogView: View {
                         Text("공부 중 · ").foregroundStyle(.secondary)
                         Text(since, style: .timer).monospacedDigit()
                     } else {
-                        Text("\(Routine.format(amount))/\(Routine.format(routine.studyGoal))\(routine.studyUnit)")
+                        Text("\(Routine.format(amount))/\(Routine.format(routine.studyGoal))\(routine.studyUnit.localizedValue)")
                             .monospacedDigit()
                             .foregroundStyle(amount >= routine.studyGoal ? .primary : .secondary)
                     }
@@ -186,7 +186,7 @@ struct StudyLogView: View {
 
     private var dayTitle: String {
         let c = Calendar.current.dateComponents([.month, .day], from: day)
-        return "\(c.month ?? 0)월 \(c.day ?? 0)일"
+        return String(localized: "\(c.month ?? 0)월 \(c.day ?? 0)일")
     }
 
     private func add(_ amount: Double) {

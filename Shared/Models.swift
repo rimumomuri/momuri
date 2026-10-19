@@ -20,9 +20,9 @@ enum IntervalUnit: String, Codable, CaseIterable {
 
     var label: String {
         switch self {
-        case .day: "일"
-        case .week: "주"
-        case .month: "개월"
+        case .day: String(localized: "일")
+        case .week: String(localized: "주")
+        case .month: String(localized: "개월")
         }
     }
 }
@@ -33,31 +33,31 @@ enum RoutineCategory: String, Codable, CaseIterable {
 
     var title: String {
         switch self {
-        case .appointment: "약속·일정"
-        case .study: "자격증 공부"
-        case .medicine: "약·영양제"
-        case .gym: "헬스"
-        case .cardio: "러닝·유산소"
-        case .care: "관리·미용"
-        case .pet: "반려견"
-        case .diet: "식단"
-        case .screen: "폰 사용"
-        case .other: "기타"
+        case .appointment: String(localized: "약속·일정")
+        case .study: String(localized: "자격증 공부")
+        case .medicine: String(localized: "약·영양제")
+        case .gym: String(localized: "헬스")
+        case .cardio: String(localized: "러닝·유산소")
+        case .care: String(localized: "관리·미용")
+        case .pet: String(localized: "반려견")
+        case .diet: String(localized: "식단")
+        case .screen: String(localized: "폰 사용")
+        case .other: String(localized: "기타")
         }
     }
 
     var subtitle: String {
         switch self {
-        case .appointment: "날짜·시간·장소가 있는 한 번의 일정"
-        case .study: "시험 D-day와 매일 목표, 같이 공부"
-        case .medicine: "매일 정해진 시간에 복용"
-        case .gym: "한 주에 부위 채우기"
-        case .cardio: "한 달 목표 거리·횟수"
-        case .care: "제모, 미용실처럼 주기적으로"
-        case .pet: "샴푸, 심장사상충, 접종"
-        case .diet: "식사 시간대와 금식"
-        case .screen: "하루 사용 시간 목표"
-        case .other: "매일·주기·주간 자유롭게"
+        case .appointment: String(localized: "날짜·시간·장소가 있는 한 번의 일정")
+        case .study: String(localized: "시험 D-day와 매일 목표, 같이 공부")
+        case .medicine: String(localized: "매일 정해진 시간에 복용")
+        case .gym: String(localized: "한 주에 부위 채우기")
+        case .cardio: String(localized: "한 달 목표 거리·횟수")
+        case .care: String(localized: "제모, 미용실처럼 주기적으로")
+        case .pet: String(localized: "샴푸, 심장사상충, 접종")
+        case .diet: String(localized: "식사 시간대와 금식")
+        case .screen: String(localized: "하루 사용 시간 목표")
+        case .other: String(localized: "매일·주기·주간 자유롭게")
         }
     }
 
@@ -171,6 +171,9 @@ final class Routine {
         self.kindRaw = kind.rawValue
         self.sortOrder = sortOrder
     }
+
+    /// 화면에 보여 줄 이름. 추천·기본 이름은 한국어로 저장하고 여기서 번역한다.
+    var displayName: String { name.localizedValue }
 
     var kind: RoutineKind {
         get { RoutineKind(rawValue: kindRaw) ?? .daily }

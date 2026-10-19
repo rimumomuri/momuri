@@ -5,6 +5,15 @@ enum HomeMode: String, CaseIterable {
     case home = "홈"
     case calendar = "달력"
     case routines = "루틴"
+
+    /// rawValue 는 @AppStorage 에 저장되는 값이라 그대로 두고, 화면에는 이 이름을 보여 준다
+    var title: String {
+        switch self {
+        case .home: String(localized: "홈")
+        case .calendar: String(localized: "달력")
+        case .routines: String(localized: "루틴")
+        }
+    }
 }
 
 enum RoutineRoute: Hashable {
@@ -96,8 +105,11 @@ struct ModeSwitch: View {
                 Button {
                     withAnimation(.snappy(duration: 0.25)) { mode = m }
                 } label: {
-                    Text(m.rawValue)
+                    Text(m.title)
                         .font(.subheadline.weight(.medium))
+                        // 일본어(カレンダー 등)는 글자가 길어서 줄바꿈되지 않게 조금 줄인다
+                        .lineLimit(1)
+                        .minimumScaleFactor(0.8)
                         .foregroundStyle(mode == m ? Color(.systemBackground) : .secondary)
                         .padding(.horizontal, 16)
                         .padding(.vertical, 8)

@@ -77,7 +77,7 @@ struct RoutineSnapshot: Identifiable {
 
     init(_ routine: Routine, days: Int, today: Date = .now) {
         id = routine.id.uuidString
-        name = routine.name
+        name = routine.displayName
         status = routine.shortStatus
         cells = Calendar.current.days(endingAt: today, count: days).map { routine.grassCell(on: $0, today: today) }
         dueToday = routine.appears(on: today, today: today)

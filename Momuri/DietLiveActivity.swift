@@ -20,12 +20,12 @@ enum DietLiveActivity {
         let state = DietActivityAttributes.ContentState(eating: phase.eating, start: phase.start, end: phase.end)
         let content = ActivityContent(state: state, staleDate: phase.end)
 
-        if let current = activities.first, current.attributes.name == diet.name, current.attributes.window == diet.windowLabel {
+        if let current = activities.first, current.attributes.name == diet.displayName, current.attributes.window == diet.windowLabel {
             Task { await current.update(content) }
         } else {
             Task {
                 for a in activities { await a.end(nil, dismissalPolicy: .immediate) }
-                _ = try? Activity.request(attributes: DietActivityAttributes(name: diet.name, window: diet.windowLabel), content: content)
+                _ = try? Activity.request(attributes: DietActivityAttributes(name: diet.displayName, window: diet.windowLabel), content: content)
             }
         }
     }

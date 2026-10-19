@@ -42,8 +42,8 @@ enum ScreenTimeShared {
 
     static func label(minutes: Int) -> String {
         let h = minutes / 60, m = minutes % 60
-        if h == 0 { return "\(m)분" }
-        return m == 0 ? "\(h)시간" : "\(h)시간 \(m)분"
+        if h == 0 { return String(localized: "\(m)분") }
+        return m == 0 ? String(localized: "\(h)시간") : String(localized: "\(h)시간 \(m)분")
     }
 }
 

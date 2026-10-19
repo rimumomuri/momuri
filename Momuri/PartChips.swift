@@ -18,7 +18,7 @@ struct PartChips: View {
                     let state: ChipState = doneOnDay.contains(part) ? .doneToday
                         : doneInWeek.contains(part) ? .doneEarlier
                         : part == next ? .next : .todo
-                    Button { onTap?(part) } label: { chip(part, state) }
+                    Button { onTap?(part) } label: { chip(part.localizedValue, state) }
                         .buttonStyle(.plain)
                         .disabled(onTap == nil || state == .doneEarlier)
                 }

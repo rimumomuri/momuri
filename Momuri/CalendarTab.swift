@@ -57,7 +57,7 @@ struct CalendarTab: View {
             }
             Button("취소", role: .cancel) { valueText = "" }
         } message: {
-            if let routine = valueEntry { Text(routine.name + " · 이번 달 " + routine.statusLabel) }
+            if let routine = valueEntry { Text(routine.displayName + " · " + String(localized: "이번 달 \(routine.statusLabel)")) }
         }
         .onChange(of: selected) { _, day in
             month = day
@@ -91,8 +91,8 @@ struct CalendarTab: View {
 
     private var headerTitle: String {
         let c = cal.dateComponents([.month, .day], from: selected)
-        let weekday = selected.formatted(.dateTime.weekday(.abbreviated).locale(Locale(identifier: "ko_KR")))
-        return "\(c.month ?? 0)월 \(c.day ?? 0)일 \(weekday)"
+        let weekday = selected.formatted(.dateTime.weekday(.abbreviated).locale(Locale.app))
+        return String(localized: "\(c.month ?? 0)월 \(c.day ?? 0)일 \(weekday)")
     }
 
     // MARK: - 할 일 묶음
@@ -134,7 +134,7 @@ struct CalendarTab: View {
                         Image(systemName: "checkmark")
                         Text("완료·쉼 \(done.count)개")
                         if !showDone {
-                            Text("· " + done.map(\.name).joined(separator: ", "))
+                            Text("· " + done.map(\.displayName).joined(separator: ", "))
                                 .lineLimit(1)
                         }
                         Spacer()
@@ -158,7 +158,7 @@ struct CalendarTab: View {
         routine.kind == .weekly || routine.kind == .monthly
     }
 
-    private func section<Content: View>(_ title: String, @ViewBuilder content: () -> Content) -> some View {
+    private func section<Content: View>(_ title: LocalizedStringKey, @ViewBuilder content: () -> Content) -> some View {
         VStack(alignment: .leading, spacing: 0) {
             Text(title).font(.caption).foregroundStyle(.secondary).padding(.bottom, 2)
             content()
@@ -178,7 +178,7 @@ struct CalendarTab: View {
                     Image(systemName: done ? "checkmark.circle.fill" : routine.isRestDay(selected) ? "moon.zzz" : partial ? "circle.lefthalf.filled" : "circle")
                         .font(.title3)
                         .foregroundStyle(urgency.color ?? .primary)
-                    Text(routine.name)
+                    Text(routine.displayName)
                         .foregroundStyle(done && !isOpenEnded(routine) ? .secondary : .primary)
                         .lineLimit(1)
                     if routine.shareId != nil {
@@ -241,7 +241,7 @@ struct CalendarTab: View {
                         selected = cal.startOfDay(for: routine.eventDate)
                     } label: {
                         HStack {
-                            Text(routine.name)
+                            Text(routine.displayName)
                             Spacer()
                             Text(routine.eventLabel(relative: false)).foregroundStyle(.secondary).monospacedDigit()
                         }
@@ -262,7 +262,8 @@ struct WeekStrip: View {
     let routines: [Routine]
 
     private let cal = Calendar.current
-    private let weekdays = ["일", "월", "화", "수", "목", "금", "토"]
+    private let weekdays = [String(localized: "일"), String(localized: "월"), String(localized: "화"), String(localized: "수"),
+                            String(localized: "목"), String(localized: "금"), String(localized: "토")]
 
     private var days: [Date] {
         guard let start = cal.dateInterval(of: .weekOfYear, for: selected)?.start else { return [] }
@@ -320,7 +321,7 @@ struct PartPickerSheet: View {
     var body: some View {
         VStack(alignment: .leading, spacing: 16) {
             HStack {
-                Text(routine.name).font(.headline)
+                Text(routine.displayName).font(.headline)
                 Spacer()
                 Text(routine.listStatus(on: day)).font(.subheadline).foregroundStyle(.secondary)
             }

@@ -60,15 +60,17 @@ struct RoutineFormView: View {
         (1, .week), (2, .week), (1, .month), (2, .month), (3, .month),
     ]
     private static let reminderChoices: [(minutes: Int, label: String)] = [
-        (0, "정각"), (10, "10분 전"), (60, "1시간 전"), (1440, "하루 전"),
+        (0, String(localized: "정각")), (10, String(localized: "10분 전")), (60, String(localized: "1시간 전")), (1440, String(localized: "하루 전")),
     ]
 
+    /// 이름은 저장 값(한국어). 칩과 이름 칸에는 localizedValue 로 보여 준다.
     private static let petPresets: [(name: String, value: Int, unit: IntervalUnit)] = [
         ("샴푸", 2, .week), ("발톱 깎기", 2, .week), ("귀 청소", 1, .week),
         ("심장사상충 약", 1, .month), ("구충제", 3, .month), ("미용", 2, .month), ("종합 백신", 12, .month),
     ]
 
-    private static let presetParts = ["가슴", "등", "하체", "어깨", "팔", "복근", "유산소"]
+    /// 저장 값(한국어). 화면에는 localizedValue 로 보여 준다.
+    private static let presetParts = StoredValue.parts
 
     private var effectiveKind: RoutineKind { category.fixedKind ?? kind }
 
@@ -80,16 +82,16 @@ struct RoutineFormView: View {
 
     private var namePlaceholder: String {
         switch category {
-        case .medicine: "약 이름"
-        case .care: "제모, 미용실, 피부과…"
-        case .gym: "헬스"
-        case .cardio: "러닝"
-        case .diet: "식단"
-        case .screen: "폰 사용"
-        case .appointment: "누구와 무엇을"
-        case .study: "정보처리기사, 토익…"
-        case .pet: "샴푸, 심장사상충…"
-        default: "무엇을 할까요?"
+        case .medicine: String(localized: "약 이름")
+        case .care: String(localized: "제모, 미용실, 피부과…")
+        case .gym: String(localized: "헬스")
+        case .cardio: String(localized: "러닝")
+        case .diet: String(localized: "식단")
+        case .screen: String(localized: "폰 사용")
+        case .appointment: String(localized: "누구와 무엇을")
+        case .study: String(localized: "정보처리기사, 토익…")
+        case .pet: String(localized: "샴푸, 심장사상충…")
+        default: String(localized: "무엇을 할까요?")
         }
     }
 
@@ -145,7 +147,7 @@ struct RoutineFormView: View {
                 if effectiveKind == .daily && category != .screen && category != .diet {
                     section("쉬는 요일") {
                         HStack(spacing: 6) {
-                            ForEach(Array(["일", "월", "화", "수", "목", "금", "토"].enumerated()), id: \.offset) { i, label in
+                            ForEach(Array([String(localized: "일"), String(localized: "월"), String(localized: "화"), String(localized: "수"), String(localized: "목"), String(localized: "금"), String(localized: "토")].enumerated()), id: \.offset) { i, label in
                                 chip(label, selected: restWeekdays.contains(i + 1)) {
                                     if restWeekdays.contains(i + 1) { restWeekdays.remove(i + 1) } else { restWeekdays.insert(i + 1) }
                                 }
@@ -262,7 +264,7 @@ struct RoutineFormView: View {
                         unit = p.unit
                     }
                 }
-                chip("직접", selected: customInterval) { customInterval = true }
+                chip(String(localized: "직접"), selected: customInterval) { customInterval = true }
             }
             if customInterval {
                 HStack {
@@ -286,8 +288,8 @@ struct RoutineFormView: View {
         if routine == nil {
             section("마지막으로 한 날") {
                 HStack(spacing: 8) {
-                    chip("아직 안 함", selected: !hasLastDone) { hasLastDone = false }
-                    chip("날짜 선택", selected: hasLastDone) { hasLastDone = true }
+                    chip(String(localized: "아직 안 함"), selected: !hasLastDone) { hasLastDone = false }
+                    chip(String(localized: "날짜 선택"), selected: hasLastDone) { hasLastDone = true }
                 }
                 if hasLastDone {
                     DatePicker("날짜", selection: $lastDone, in: ...Date.now, displayedComponents: .date)
@@ -306,7 +308,7 @@ struct RoutineFormView: View {
         section("이번 주에 채울 항목") {
             LazyVGrid(columns: Array(repeating: GridItem(.flexible(), spacing: 8), count: 4), spacing: 8) {
                 ForEach(Self.presetParts + parts.filter { !Self.presetParts.contains($0) }, id: \.self) { part in
-                    chip(part, selected: parts.contains(part)) { togglePart(part) }
+                    chip(part.localizedValue, selected: parts.contains(part)) { togglePart(part) }
                 }
             }
             HStack {
@@ -317,7 +319,7 @@ struct RoutineFormView: View {
             .font(.subheadline)
             .padding(.top, 4)
             if !parts.isEmpty {
-                Text("순서: " + parts.joined(separator: " → "))
+                Text("순서: \(parts.map(\.localizedValue).joined(separator: " → "))")
                     .font(.footnote)
                     .padding(.top, 4)
                 Text("고른 순서대로 다음 항목을 알려줘요. 이번 주 안에 끝내기 빠듯할 때만 알림이 와요.")
@@ -369,13 +371,13 @@ struct RoutineFormView: View {
             section("하루 목표") {
                 HStack(spacing: 8) {
                     ForEach(["문제", "분", "페이지"], id: \.self) { unit in
-                        chip(unit, selected: studyUnit == unit) {
+                        chip(unit.localizedValue, selected: studyUnit == unit) {
                             studyUnit = unit
                             studyGoal = unit == "분" ? 60 : unit == "페이지" ? 20 : 30
                         }
                     }
                 }
-                Stepper("하루 \(Routine.format(studyGoal))\(studyUnit)", value: $studyGoal,
+                Stepper("하루 \(Routine.format(studyGoal))\(studyUnit.localizedValue)", value: $studyGoal,
                         in: 1...600, step: studyUnit == "분" ? 10 : 5)
                     .padding(.top, 4)
             }
@@ -430,8 +432,8 @@ struct RoutineFormView: View {
         section("자주 하는 것") {
             LazyVGrid(columns: [GridItem(.adaptive(minimum: 96), spacing: 8)], spacing: 8) {
                 ForEach(Self.petPresets, id: \.name) { preset in
-                    chip(preset.name, selected: name == preset.name) {
-                        name = preset.name
+                    chip(preset.name.localizedValue, selected: name == preset.name.localizedValue) {
+                        name = preset.name.localizedValue
                         intervalValue = preset.value
                         unit = preset.unit
                         customInterval = !Self.presets.contains { $0.value == preset.value && $0.unit == preset.unit }
@@ -448,7 +450,7 @@ struct RoutineFormView: View {
         let apps = screenSelection.applicationTokens.count
         let categories = screenSelection.categoryTokens.count
         return section("하루 목표") {
-            Stepper("하루 " + ScreenTimeShared.label(minutes: goalMinutes), value: $goalMinutes, in: 30...600, step: 30)
+            Stepper("하루 \(ScreenTimeShared.label(minutes: goalMinutes))", value: $goalMinutes, in: 30...600, step: 30)
             Button {
                 Task {
                     if await ScreenTimeManager.requestAuthorization() { showingAppPicker = true }
@@ -483,16 +485,16 @@ struct RoutineFormView: View {
     private var targetSection: some View {
         section("이번 달 목표") {
             HStack(spacing: 8) {
-                chip("거리 (km)", selected: targetUnit == "km") {
+                chip(String(localized: "거리 (km)"), selected: targetUnit == "km") {
                     targetUnit = "km"
                     targetValue = 30
                 }
-                chip("횟수", selected: targetUnit == "회") {
+                chip(String(localized: "횟수"), selected: targetUnit == "회") {
                     targetUnit = "회"
                     targetValue = 8
                 }
             }
-            Stepper("한 달 \(Routine.format(targetValue))\(targetUnit)",
+            Stepper("한 달 \(Routine.format(targetValue))\(targetUnit.localizedValue)",
                     value: $targetValue,
                     in: targetUnit == "km" ? 5...500 : 1...60,
                     step: targetUnit == "km" ? 5 : 1)
@@ -514,14 +516,14 @@ struct RoutineFormView: View {
 
     // MARK: - 공통 조각
 
-    private func section<Content: View>(_ title: String, @ViewBuilder content: () -> Content) -> some View {
+    private func section<Content: View>(_ title: LocalizedStringKey, @ViewBuilder content: () -> Content) -> some View {
         VStack(alignment: .leading, spacing: 10) {
             Text(title).font(.caption).foregroundStyle(.secondary)
             content()
         }
     }
 
-    private func kindCard(_ value: RoutineKind, title: String, detail: String) -> some View {
+    private func kindCard(_ value: RoutineKind, title: LocalizedStringKey, detail: LocalizedStringKey) -> some View {
         let selected = kind == value
         return Button {
             withAnimation(.snappy(duration: 0.2)) { kind = value }
@@ -581,22 +583,22 @@ struct RoutineFormView: View {
             isCritical = true
             doseTimes = [Self.time(8, 0)]
         case .gym:
-            name = "헬스"
-            parts = ["가슴", "등", "하체", "어깨"]
+            name = "헬스".localizedValue
+            parts = StoredValue.defaultParts
             reminder = Self.time(19, 0)
         case .cardio:
-            name = "러닝"
+            name = "러닝".localizedValue
             autoHealth = HealthSync.isAvailable
         case .care:
             weekendOnly = true
         case .diet:
-            name = "식단"
+            name = "식단".localizedValue
         case .appointment:
             showInWidget = false
         case .study:
             reminder = Self.time(22, 0)
         case .screen:
-            name = "폰 사용"
+            name = "폰 사용".localizedValue
             screenSelection = ScreenTimeManager.selection
         default:
             break
@@ -605,7 +607,7 @@ struct RoutineFormView: View {
 
     private func load() {
         guard let routine else { return }
-        name = routine.name
+        name = routine.displayName
         kind = routine.kind
         intervalValue = routine.intervalValue
         unit = routine.intervalUnit
@@ -656,7 +658,8 @@ struct RoutineFormView: View {
                 target.logs?.append(log)
             }
         }
-        target.name = name.trimmingCharacters(in: .whitespaces)
+        // 이름 칸에는 번역된 이름을 보여 주므로, 추천·기본 이름이면 한국어로 되돌려 저장한다
+        target.name = StoredValue.key(forDisplayed: name.trimmingCharacters(in: .whitespaces))
         target.kind = kind
         target.intervalValue = intervalValue
         target.intervalUnit = unit
@@ -729,14 +732,14 @@ struct RecentLogsView: View {
             }
             ForEach(recent) { log in
                 HStack {
-                    Text(log.date.formatted(.dateTime.month().day().weekday(.abbreviated).locale(Locale(identifier: "ko_KR"))))
+                    Text(log.date.formatted(.dateTime.month().day().weekday(.abbreviated).locale(Locale.app)))
                         .foregroundStyle(.secondary)
                     Spacer()
                     if log.externalID != nil {
                         Image(systemName: "heart").font(.caption).foregroundStyle(.secondary)
                     }
                     if let value = log.value {
-                        Text(Routine.format(value) + (routine.category == .study ? routine.studyUnit : routine.targetUnit))
+                        Text(Routine.format(value) + (routine.category == .study ? routine.studyUnit : routine.targetUnit).localizedValue)
                     } else if routine.kind == .daily && routine.times.count > 1 {
                         Text(log.date.formatted(.dateTime.hour().minute()))
                     } else {
@@ -791,15 +794,15 @@ struct WeeklyHistoryView: View {
                     Button { openedLog = log } label: {
                         VStack(alignment: .leading, spacing: 3) {
                             HStack {
-                                Text(log.date.formatted(.dateTime.month().day().weekday(.abbreviated).locale(Locale(identifier: "ko_KR"))))
+                                Text(log.date.formatted(.dateTime.month().day().weekday(.abbreviated).locale(Locale.app)))
                                     .foregroundStyle(.secondary)
                                 Spacer()
-                                Text(log.part ?? "")
+                                Text((log.part ?? "").localizedValue)
                                 Image(systemName: "chevron.right").font(.caption2).foregroundStyle(.tertiary)
                             }
                             .font(.subheadline)
                             if !log.exercises.isEmpty {
-                                Text(log.exercises.joined(separator: ", "))
+                                Text(log.exercises.map(\.localizedValue).joined(separator: ", "))
                                     .font(.caption)
                                     .foregroundStyle(.secondary)
                                     .lineLimit(1)
@@ -815,7 +818,7 @@ struct WeeklyHistoryView: View {
                     Text("종목별 최고 기록").font(.caption).foregroundStyle(.secondary)
                     ForEach(bestRecords, id: \.exercise) { record in
                         HStack {
-                            Text(record.exercise)
+                            Text(record.exercise.localizedValue)
                             Spacer()
                             Text(record.summary).monospacedDigit()
                         }
@@ -832,7 +835,7 @@ struct WeeklyHistoryView: View {
     }
 
     private func label(for week: Date) -> String {
-        if Routine.weekCalendar.isDate(week, equalTo: .now, toGranularity: .weekOfYear) { return "이번 주" }
+        if Routine.weekCalendar.isDate(week, equalTo: .now, toGranularity: .weekOfYear) { return String(localized: "이번 주") }
         guard let start = Routine.weekCalendar.dateInterval(of: .weekOfYear, for: week)?.start else { return "" }
         let c = Calendar.current.dateComponents([.month, .day], from: start)
         return "\(c.month ?? 0)/\(c.day ?? 0)~"

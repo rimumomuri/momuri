@@ -160,6 +160,7 @@ struct BackupDocument: FileDocument {
 struct SettingsView: View {
     @Environment(\.modelContext) private var context
     @Environment(\.dismiss) private var dismiss
+    @Environment(\.openURL) private var openURL
     @State private var exportDoc: BackupDocument?
     @State private var importing = false
     @State private var pendingRestore: Data?
@@ -168,6 +169,20 @@ struct SettingsView: View {
     var body: some View {
         NavigationStack {
             List {
+                // 언어는 iOS 의 앱별 언어 설정(설정 앱 > momuri > 언어)을 쓴다
+                Section {
+                    Button {
+                        if let url = URL(string: UIApplication.openSettingsURLString) { openURL(url) }
+                    } label: {
+                        HStack {
+                            Text("언어")
+                            Spacer()
+                            Text(currentLanguage).foregroundStyle(.secondary)
+                        }
+                    }
+                } footer: {
+                    Text("설정 앱의 momuri > 언어에서 한국어·일본어를 바꿀 수 있어요.")
+                }
                 Section {
                     Button("백업 파일 내보내기") {
                         if let data = try? Backup.encode(Backup.makeFile(context: context)) { exportDoc = BackupDocument(data: data) }
@@ -176,8 +191,8 @@ struct SettingsView: View {
                 } header: {
                     Text("백업")
                 } footer: {
-                    Text("자동 백업: 하루 한 번 파일 앱 > 나의 iPhone > momuri > 백업 에 저장돼요 (최근 14일)."
-                         + (Backup.lastAutoBackup.map { "\n마지막 자동 백업 \($0)" } ?? ""))
+                    Text(String(localized: "자동 백업: 하루 한 번 파일 앱 > 나의 iPhone > momuri > 백업 에 저장돼요 (최근 14일).")
+                         + (Backup.lastAutoBackup.map { "\n" + String(localized: "마지막 자동 백업 \($0)") } ?? ""))
                 }
                 if let message {
                     Section { Text(message).font(.subheadline) }
@@ -189,7 +204,7 @@ struct SettingsView: View {
             .fileExporter(isPresented: Binding(get: { exportDoc != nil }, set: { if !$0 { exportDoc = nil } }),
                           document: exportDoc, contentType: .json,
                           defaultFilename: "momuri-backup") { result in
-                if case .success = result { message = "백업 파일을 저장했어요." }
+                if case .success = result { message = String(localized: "백업 파일을 저장했어요.") }
             }
             .fileImporter(isPresented: $importing, allowedContentTypes: [.json]) { result in
                 guard case .success(let url) = result else { return }
@@ -204,13 +219,19 @@ struct SettingsView: View {
                     guard let data = pendingRestore else { return }
                     do {
                         let n = try Backup.restore(data, context: context)
-                        message = "루틴 \(n)개를 불러왔어요."
+                        message = String(localized: "루틴 \(n)개를 불러왔어요.")
                     } catch {
-                        message = "momuri 백업 파일이 아니에요."
+                        message = String(localized: "momuri 백업 파일이 아니에요.")
                     }
                 }
             }
         }
         .tint(.primary)
+    }
+
+    /// 지금 앱이 쓰는 언어 이름 (한국어 / 日本語)
+    private var currentLanguage: String {
+        let code = Bundle.main.preferredLocalizations.first ?? "ko"
+        return Locale.app.localizedString(forLanguageCode: code) ?? code
     }
 }

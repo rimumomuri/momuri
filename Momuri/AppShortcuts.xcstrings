@@ -1,0 +1,80 @@
+{
+  "sourceLanguage" : "ko",
+  "strings" : {
+    "${applicationName} ${routine} 완료" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${applicationName}で${routine}完了"
+          }
+        }
+      }
+    },
+    "${applicationName} 오늘 남은 일" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "${applicationName}で今日の残り"
+          }
+        },
+        "ko" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "${applicationName} 오늘 남은 일",
+              "${applicationName}에서 오늘 할 일 알려줘"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName}에 ${routine} 기록" : {
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "${applicationName}で${routine}を記録"
+          }
+        },
+        "ko" : {
+          "stringSet" : {
+            "state" : "new",
+            "values" : [
+              "${applicationName}에 ${routine} 기록",
+              "${applicationName}에서 ${routine} 했어",
+              "${applicationName} ${routine} 완료"
+            ]
+          }
+        }
+      }
+    },
+    "${applicationName}에서 ${routine} 했어" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${applicationName}で${routine}やった"
+          }
+        }
+      }
+    },
+    "${applicationName}에서 오늘 할 일 알려줘" : {
+      "extractionState" : "stale",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "${applicationName}で今日やることを教えて"
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

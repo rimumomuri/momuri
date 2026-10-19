@@ -1,0 +1,96 @@
+{
+  "sourceLanguage" : "ko",
+  "strings" : {
+    "CFBundleDisplayName" : {
+      "comment" : "Bundle display name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "momuri"
+          }
+        }
+      }
+    },
+    "CFBundleName" : {
+      "comment" : "Bundle name",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Momuri"
+          }
+        }
+      }
+    },
+    "NSAlarmKitUsageDescription" : {
+      "comment" : "Privacy - usage description",
+      "extractionState" : "stale",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "必ずやるルーティンを、マナーモードでもアラームでお知らせします。"
+          }
+        }
+      }
+    },
+    "NSHealthShareUsageDescription" : {
+      "comment" : "Privacy - usage description",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "ランニングの記録をルーティンに自動で入れるため、ヘルスケアのワークアウト記録を読み取ります。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "러닝 기록을 루틴에 자동으로 채우기 위해 건강 앱의 운동 기록을 읽어요."
+          }
+        }
+      }
+    },
+    "NSHealthUpdateUsageDescription" : {
+      "comment" : "Privacy - usage description",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "開発用のサンプルのワークアウト記録をヘルスケアに書き込むときだけ使います。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "개발용 샘플 운동 기록을 건강 앱에 넣을 때만 사용해요."
+          }
+        }
+      }
+    },
+    "NSLocalNetworkUsageDescription" : {
+      "comment" : "Privacy - usage description",
+      "extractionState" : "extracted_with_value",
+      "localizations" : {
+        "ja" : {
+          "stringUnit" : {
+            "state" : "needs_review",
+            "value" : "同じWi-FiにあるMacのmomuriサーバーと、共有ルーティンをやりとりします。"
+          }
+        },
+        "ko" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "같은 와이파이에 있는 Mac의 momuri 서버와 공유 루틴을 주고받아요."
+          }
+        }
+      }
+    }
+  },
+  "version" : "1.0"
+}

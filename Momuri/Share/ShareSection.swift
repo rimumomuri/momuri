@@ -21,13 +21,13 @@ struct ShareSection: View {
                 HStack {
                     Text(code).font(.title3.monospaced().weight(.semibold))
                     Spacer()
-                    ShareLink(item: "momuri에서 '\(routine.name)' 같이 해요. 초대 코드: \(code)") {
+                    ShareLink(item: String(localized: "momuri에서 '\(routine.displayName)' 같이 해요. 초대 코드: \(code)")) {
                         Label("초대 보내기", systemImage: "square.and.arrow.up").font(.subheadline)
                     }
                 }
                 let members = sync.members[routine.shareId ?? ""] ?? []
                 if !members.isEmpty {
-                    Text(members.map { $0.id == ShareClient.me?.id ? "\($0.name)(나)" : $0.name }.joined(separator: ", "))
+                    Text(members.map { $0.id == ShareClient.me?.id ? String(localized: "\($0.name)(나)") : $0.name }.joined(separator: ", "))
                         .font(.subheadline)
                 }
                 Text("각자 체크하고, 루틴 목록에서 서로의 잔디를 볼 수 있어요.")
@@ -83,7 +83,7 @@ struct ShareSection: View {
         do {
             if ShareClient.me == nil {
                 let trimmed = name.trimmingCharacters(in: .whitespaces)
-                guard !trimmed.isEmpty else { error = "이름을 적어 주세요"; return }
+                guard !trimmed.isEmpty else { error = String(localized: "이름을 적어 주세요"); return }
                 _ = try await ShareClient.register(name: trimmed)
             }
             try await sync.share(routine, context: context)
